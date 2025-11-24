@@ -1,0 +1,1670 @@
+[
+  {
+    "id": "s-1759299735062",
+    "createdAt": 1759299916479,
+    "candidate": {
+      "name": "トラン・ヴァン・チュ",
+      "email": "tuilatru2k25@gmail.com",
+      "phone": "0866495211"
+    },
+    "questions": [
+      {
+        "id": "q-0",
+        "text": "What are the main components of a typical fullstack web application?",
+        "difficulty": "easy",
+        "timeLimit": 20
+      },
+      {
+        "id": "q-1",
+        "text": "Can you explain the fundamental difference between frontend and backend development?",
+        "difficulty": "easy",
+        "timeLimit": 20
+      },
+      {
+        "id": "q-2",
+        "text": "How do the frontend and backend components typically communicate with each other in a web application?",
+        "difficulty": "medium",
+        "timeLimit": 60
+      },
+      {
+        "id": "q-3",
+        "text": "What are some common types of databases used in fullstack development, and when might you choose a relational over a NoSQL database?",
+        "difficulty": "medium",
+        "timeLimit": 60
+      },
+      {
+        "id": "q-4",
+        "text": "Describe some strategies for optimizing the performance and scalability of a fullstack application.",
+        "difficulty": "hard",
+        "timeLimit": 180
+      },
+      {
+        "id": "q-5",
+        "text": "What are some critical security considerations you would address when designing and building a fullstack application?",
+        "difficulty": "hard",
+        "timeLimit": 180
+      }
+    ],
+    "answers": {
+      "0": {
+        "text": "A typical fullstack web application consists of three main components: the Frontend (client-side, user interface), the Backend (server-side, logic, and data processing), and the Database (data storage). The frontend uses HTML, CSS, and JavaScript to create the user interface, the backend uses programming languages and frameworks like Node.js or Python for server logic and APIs to communicate with the frontend, and the database stores and retrieves application data.  \n1. Frontend (Client-Side)\nPurpose: The user interface (UI) that users interact with directly in their web browsers. \nTechnologies:\nHTML: Structures the content of web pages. \nCSS: Styles the visual presentation of the content. \nJavaScript: Adds interactivity, dynamic content, and complex features to web pages. \nFrontend Frameworks (e.g., React, Angular, Vue.js): Provide tools and structure to build dynamic and complex user interfaces more efficiently. \n2. Backend (Server-Side)\nPurpose: Manages the application's core logic, processes data, and communicates with the database. \nComponents & Technologies:\nProgramming Languages: Python, Java, Node.js, Ruby, PHP. \nServer-side Frameworks: Django (Python), Spring Boot (Java), Express (Node.js). \nAPIs (Application Programming Interfaces): Tools that enable communication between the frontend and the backend, often using RESTful or GraphQL over HTTP. \nApplication Logic: The \"behind-the-scenes\" processing, business rules, and data handling. \n3. Database\nPurpose: Stores and retrieves all the data the application needs to function. \nTypes & Technologies:\nSQL Databases (Relational): Structured data, managed with languages like SQL. Examples include MySQL and PostgreSQL. \nNoSQL Databases: Flexible data models. Examples include MongoDB. \nORMs/ODMs: Object-Relational Mappers and Object-Document Mappers simplify database interactions for developers."
+      },
+      "1": {
+        "text": "Frontend development focuses on the user-facing elements of a website or application—everything a user sees and interacts with, like layouts, buttons, and text. Backend development, conversely, handles the behind-the-scenes mechanics, including servers, databases, and application logic, which processes and stores data to power the frontend. Think of the frontend as the restaurant's dining room and the backend as the kitchen that prepares the food.  \nFrontend Development (Client-Side)\nWhat it is: The part of a web application that users see and interact with directly in their browser. \nResponsibilities: Designing the user interface, ensuring a good user experience, and creating visual elements. \nKey Technologies: HTML (for structure), CSS (for styling), and JavaScript (for interactivity). \nExamples: Creating buttons, navigation menus, text fields, and handling how pages display on different devices. \nBackend Development (Server-Side)\nWhat it is: The \"engine\" or infrastructure that makes an application work, handling data, servers, and logic. \nResponsibilities: Managing databases, processing data, handling user authentication, and ensuring the application functions smoothly. \nKey Technologies:\nLanguages: Python, Java, Ruby, PHP, .NET. \nDatabases: MySQL, PostgreSQL, SQL Server. \nFrameworks: Django (for Python), Ruby on Rails (for Ruby). \nExamples: Storing user information, processing online purchases, retrieving data for a user request, and managing servers. \nHow They Work Together\nWhen a user interacts with the frontend (e.g., fills out a form), the frontend sends a request to the backend. \nThe backend processes the request, retrieves or saves data from the database, and sends the necessary information back to the frontend. \nThe frontend then uses this information to display the result to the user."
+      },
+      "2": {
+        "text": "Frontend and backend components in a web application primarily communicate through HTTP requests and responses. This client-server model facilitates the exchange of information and functionality between the user-facing interface and the server-side logic.\nHere's a breakdown of the typical communication flow:\nFrontend Initiates Request: The user interacts with the frontend (e.g., clicking a button, submitting a form). This interaction triggers JavaScript code in the browser to send an HTTP request to the backend.\nRequest Types: Common HTTP methods include GET (to retrieve data), POST (to send data), PUT (to update data), and DELETE (to remove data).\nData Format: Data sent with the request is often formatted as JSON (JavaScript Object Notation), but can also be form data or other formats.\nBackend Processes Request: The backend server receives the HTTP request. It then processes the request based on the requested endpoint and the data provided. This may involve:\nDatabase Interaction: Querying, inserting, updating, or deleting data in a database.\nBusiness Logic: Performing calculations, validations, or other operations.\nExternal Service Integration: Communicating with other APIs or services.\nBackend Sends Response: After processing, the backend generates an HTTP response and sends it back to the frontend.\nResponse Status: The response includes an HTTP status code (e.g., 200 OK, 404 Not Found, 500 Internal Server Error) indicating the success or failure of the request.\nResponse Data: If the request was successful and involved data retrieval, the response body typically contains the requested data, again often in JSON format.\nFrontend Renders Response: The frontend receives the response, parses the data (if any), and updates the user interface accordingly. This could involve displaying new information, updating existing elements, or showing error messages.\nKey Technologies and Concepts:\nAPIs (Application Programming Interfaces): The backend exposes a set of defined endpoints and rules (the API) that the frontend can use to interact with its functionalities.\nRESTful APIs: A common architectural style for APIs that uses standard HTTP methods and resource-based URLs.\nAJAX (Asynchronous JavaScript and XML): Allows the frontend to make asynchronous HTTP requests without requiring a full page reload, leading to more dynamic user experiences.\nCORS (Cross-Origin Resource Sharing): A security mechanism that allows or restricts web pages from making requests to a different domain than the one that served the web page."
+      },
+      "3": {
+        "text": "Common databases include relational (like MySQL and PostgreSQL) and NoSQL types such as document-based (MongoDB) and key-value stores (Redis). Choose a relational database for structured, transactional data with ACID compliance (e.g., banking) or when complex queries and data integrity are paramount. Opt for a NoSQL database when dealing with large, unstructured or rapidly changing data, high scalability needs, or when eventual consistency is acceptable. \nCommon Types of Databases\nRelational Databases: Store data in tables with fixed schemas, supporting complex queries and relationships using SQL. \nExamples: MySQL, PostgreSQL, SQLite, Oracle. \nNoSQL Databases: Non-relational databases with flexible schemas, offering scalability and performance for diverse data types. \nExamples:\nDocument Databases: Store data in JSON-like documents, good for unstructured data (e.g., MongoDB). \nKey-Value Stores: Simple databases that store data as a collection of key-value pairs, ideal for high-speed access (e.g., Redis). \nWide-Column Stores: Designed for massive datasets and high-volume read/write operations (e.g., Cassandra). \nGraph Databases: Used for data with complex relationships, such as social networks (e.g., Neo4j)."
+      },
+      "4": {
+        "text": "Use asynchronous functions for I/O operations like database queries, file access, and network requests. Load Balancing: If you're handling a high volume of traffic, distribute traffic across multiple servers using a load balancer (e.g., Nginx, HAProxy) to improve scalability and ensure fault tolerance."
+      },
+      "5": {
+        "text": "Here are essential security best practices for full-stack developers:\nSanitize and Validate User Input. ...\nImplement Proper Authentication and Authorization. ...\nCross-Site Scripting (XSS) Prevention. ...\nCross-Site Request Forgery (CSRF) Protection. ...\nEncrypt Sensitive Data. ...\nImplement Proper Error Handling. ...\nSecure Your APIs."
+      }
+    },
+    "aiResult": {
+      "perAnswer": [
+        {
+          "index": 1,
+          "score": 9,
+          "feedback": "Excellent, comprehensive answer detailing the three core components (Frontend, Backend, Database) with relevant technologies and purposes for each."
+        },
+        {
+          "index": 2,
+          "score": 9,
+          "feedback": "Very clear explanation of the fundamental differences between frontend and backend, covering responsibilities, key technologies, and how they interact, supported by a good analogy."
+        },
+        {
+          "index": 3,
+          "score": 10,
+          "feedback": "Outstanding explanation of the communication flow, covering HTTP requests/responses, data formats (JSON), status codes, and essential concepts like APIs, REST, AJAX, and CORS in detail."
+        },
+        {
+          "index": 4,
+          "score": 9,
+          "feedback": "Good overview of common database types and clear, practical advice on choosing between relational and NoSQL based on data structure, transaction needs, and scalability."
+        },
+        {
+          "index": 5,
+          "score": 6,
+          "feedback": "Correctly identifies asynchronous operations and load balancing as key strategies. However, the answer could be more comprehensive by including other common optimization techniques like caching, database indexing, or CDN usage."
+        },
+        {
+          "index": 6,
+          "score": 9,
+          "feedback": "Excellent list of critical security considerations, covering input validation, authentication, authorization, common attack prevention (XSS, CSRF), data encryption, error handling, and API security."
+        }
+      ],
+      "overall": {
+        "score": 87,
+        "summary": "The candidate demonstrates a very strong understanding of core fullstack concepts, including architecture, component communication, database selection, and critical security considerations. While the answer on performance optimization could have been more extensive, their knowledge across other key areas is detailed and accurate."
+      }
+    },
+    "completedAt": 1759299916475
+  },
+  {
+    "id": "s-1759300916513",
+    "createdAt": 1759301141251,
+    "candidate": {
+      "name": "トラン・ヴァン・チュ",
+      "email": "vantru1211@gmail.com",
+      "phone": "0866495211"
+    },
+    "questions": [
+      {
+        "id": "q-0",
+        "text": "What are the fundamental technologies used for building the frontend of a web application?",
+        "difficulty": "easy",
+        "timeLimit": 20
+      },
+      {
+        "id": "q-1",
+        "text": "Explain the role of an API in a typical fullstack application.",
+        "difficulty": "easy",
+        "timeLimit": 20
+      },
+      {
+        "id": "q-2",
+        "text": "Describe the principles of RESTful APIs and how they facilitate communication between frontend and backend.",
+        "difficulty": "medium",
+        "timeLimit": 60
+      },
+      {
+        "id": "q-3",
+        "text": "Compare and contrast SQL and NoSQL databases, providing scenarios where each would be preferred.",
+        "difficulty": "medium",
+        "timeLimit": 60
+      },
+      {
+        "id": "q-4",
+        "text": "How would you approach designing a scalable and fault-tolerant fullstack application, considering both frontend and backend aspects?",
+        "difficulty": "hard",
+        "timeLimit": 300
+      },
+      {
+        "id": "q-5",
+        "text": "Discuss common web security vulnerabilities and the measures you would implement across the full stack to address them.",
+        "difficulty": "hard",
+        "timeLimit": 300
+      }
+    ],
+    "answers": {
+      "0": {
+        "text": "The fundamental technologies for building the frontend of a web application are HTML, CSS, and JavaScript. HTML provides the structure and content, CSS handles the styling and visual design, and JavaScript adds interactivity and dynamic behavior to web pages. Modern development also relies heavily on frontend frameworks and libraries like React, Angular, and Vue, which simplify the development of complex user interfaces and Single Page Applications (SPAs).  \nCore Technologies\nHTML (HyperText Markup Language): This is the foundational language for web pages. It structures the content by defining elements and giving them meaning and structure, forming the base of any website. \nCSS (Cascading Style Sheets): CSS is responsible for the visual presentation and styling of HTML elements. It controls the colors, fonts, and overall aesthetic appeal of a web page. \nJavaScript (JS): This programming language adds interactivity and dynamic behavior to web pages. It enriches user experiences, makes sites more engaging, and is crucial for modern web application functionality. \nFrameworks and Libraries\nFrontend Frameworks: These are collections of HTML, CSS, and JS code that make the development process easier and improve developer productivity. Examples include: \nReact: A JavaScript library for building user interfaces with reusable components, ideal for large-scale applications. \nAngular: A comprehensive, opinionated framework from Google that provides a complete solution for web development. \nVue: Another popular JavaScript framework that is known for its versatility and ease of integration. \nUI Toolkits: Tools like Bootstrap offer pre-built components, grids, and utility classes to help developers create responsive and visually appealing designs quickly and efficiently. \nOther Important Concepts\nResponsive Web Design: The practice of designing web applications that adapt their layout to different screen sizes and devices, ensuring a consistent user experience across desktops, tablets, and mobile phones. \nSingle Page Applications (SPAs): These are dynamic web applications that load a single HTML page and update content dynamically as the user interacts with the app, rather than requiring a full page reload."
+      },
+      "1": {
+        "text": "In a typical full-stack application, an Application Programming Interface (API) serves as the crucial intermediary that enables communication and data exchange between the frontend (client-side) and the backend (server-side).\nKey roles of an API in a full-stack application:\nEnabling Frontend-Backend Communication: The frontend, which handles the user interface and user interactions, sends requests to the backend via the API. These requests can include retrieving data, submitting information, or triggering specific actions. The API defines the rules and formats for these interactions, ensuring the frontend knows how to ask for information and the backend knows how to respond.\nData Retrieval and Manipulation: The API acts as the gateway to the application's data. When the frontend needs to display information (e.g., a list of products, user profiles), it makes an API call to the backend, which then retrieves the requested data from the database and sends it back to the frontend through the API. Similarly, when a user creates, updates, or deletes data, the frontend sends these requests to the backend via API endpoints, which then perform the necessary operations on the database.\nEncapsulating Business Logic: The API allows the backend to expose specific functionalities and business logic to the frontend without revealing the underlying implementation details. This separation of concerns simplifies development, as frontend developers only need to understand how to interact with the API, not the complexities of the backend code or database structure.\nFacilitating Integration with External Services: APIs are not limited to internal communication. They also enable the full-stack application to integrate with external services and third-party platforms. For example, an e-commerce application might use a payment gateway API to process transactions, a mapping API to display locations, or a social media API for sharing functionalities.\nSecurity and Access Control: APIs often incorporate security measures such as authentication and authorization. This ensures that only authorized users or applications can access specific resources and perform certain actions, protecting sensitive data and functionalities.\nIn essence, the API acts as the contract between the frontend and backend, defining how they interact and facilitating the smooth flow of data and functionality throughout the entire full-stack application."
+      },
+      "2": {
+        "text": "RESTful APIs, or Representational State Transfer APIs, adhere to a set of architectural principles that govern how web services communicate. These principles facilitate a clear and efficient separation of concerns between frontend and backend systems.\nPrinciples of RESTful APIs:\nClient-Server Architecture: The client (frontend) and server (backend) are distinct and operate independently. The client handles the user interface and experience, while the server manages data storage, processing, and business logic. This separation allows for independent development and evolution of each component. \nStatelessness: Each request from the client to the server must contain all the information necessary to understand and process it. The server does not store any client-specific session state between requests, making the API more scalable and resilient. \nCacheability: Responses from the server can be defined as cacheable or non-cacheable. If cacheable, the client can store and reuse the response data for future equivalent requests, reducing server load and improving performance.\nUniform Interface: This is a core principle promoting simplicity and visibility within the system. It encompasses:\nResource Identification in Requests: Resources are identified using Uniform Resource Identifiers (URIs).\nResource Manipulation Through Representations: Clients interact with resources by exchanging representations (e.g., JSON, XML) of their state.\nSelf-Descriptive Messages: Each message contains enough information to describe how to process it. \nHypermedia as the Engine of Application State (HATEOAS): Resources can include links to related resources, allowing clients to discover available actions dynamically.\nLayered System: A client cannot ordinarily tell whether it is connected directly to the server or to an intermediary (like a proxy or load balancer). This allows for flexible system architecture and improved scalability through layers like load balancing and shared caches. \nFacilitating Communication between Frontend and Backend:\nRESTful principles enable seamless communication by:\nStandardizing Interactions: The uniform interface ensures that both frontend and backend understand how to interact, using standard HTTP methods (GET, POST, PUT, DELETE) and consistent data formats (e.g., JSON).\nDecoupling Components: The client-server separation allows frontend and backend teams to develop and deploy independently, reducing dependencies and accelerating development cycles.\nImproving Scalability: Statelessness and cacheability contribute to a more scalable backend, as servers do not need to maintain session information and can offload requests to caches.\nEnhancing Maintainability: The clear structure and standardized communication make it easier to understand, debug, and maintain the system over time."
+      },
+      "3": {
+        "text": "SQL and NoSQL databases represent two fundamental approaches to data storage and management, each with distinct characteristics and optimal use cases.\nSQL Databases (Relational Databases):\nStructure: Data is organized into tables with predefined schemas, using rows and columns. Relationships between tables are established through foreign keys.\nQuery Language: Primarily use Structured Query Language (SQL) for data definition, manipulation, and querying.\nACID Compliance: Emphasize Atomicity, Consistency, Isolation, and Durability (ACID) properties, ensuring data integrity and reliable transactions.\nScalability: Traditionally scale vertically by upgrading hardware on a single server, though some modern SQL databases offer horizontal scaling options.\nExamples: MySQL, PostgreSQL, Oracle, SQL Server.\nNoSQL Databases (Non-Relational Databases):\nStructure: Offer flexible data models, including document (e.g., MongoDB), key-value (e.g., Redis), column-family (e.g., Cassandra), and graph (e.g., Neo4j). Schemas are often dynamic or non-existent.\nQuery Language: Use various query languages specific to their data model, or API calls for data interaction.\nBASE Properties: Prioritize Basic Availability, Soft state, and Eventual consistency (BASE) for high availability and performance in distributed environments.\nScalability: Designed for horizontal scaling, distributing data across multiple servers for increased capacity and performance.\nExamples: MongoDB, Cassandra, Redis, Neo4j, Couchbase.\nComparison and Contrast:\nSchema: SQL databases require a rigid, predefined schema, while NoSQL databases offer schema flexibility.\nConsistency vs. Availability: SQL prioritizes strong consistency (ACID), ensuring data integrity, while NoSQL often prioritizes availability and partition tolerance (BASE), allowing for eventual consistency.\nScalability: SQL primarily scales vertically, while NoSQL excels in horizontal scaling.\nData Models: SQL uses a tabular, relational model, while NoSQL offers diverse models like document, key-value, and graph.\nPreferred Scenarios:\nSQL Databases are preferred for:\nApplications requiring strong data consistency and transactional integrity: Financial systems, e-commerce platforms (for order processing), and inventory management.\nStructured data with well-defined relationships: Enterprise Resource Planning (ERP) systems, Customer Relationship Management (CRM) applications. \nComplex queries and reporting: Business intelligence and data warehousing where analytical queries are crucial.\nNoSQL Databases are preferred for:\nHandling large volumes of unstructured or semi-structured data: Content management systems, social media feeds, IoT data.\nApplications requiring high scalability and availability: Real-time analytics, online gaming, and large-scale web applications.\nRapid development and evolving data models: Startups and projects with frequently changing requirements, where schema flexibility is advantageous.\nSpecific use cases that align with a particular NoSQL data model: Graph databases for social networks, key-value stores for caching."
+      },
+      "4": {
+        "text": "Designing a scalable and fault-tolerant fullstack application requires a holistic approach, addressing both frontend and backend considerations.\nBackend Design for Scalability and Fault Tolerance:\nMicroservices Architecture: Decompose the application into smaller, independent services. This allows individual services to be scaled independently and provides isolation, preventing a failure in one service from affecting the entire application.\nStateless Services: Design services to be stateless, meaning they do not store session information locally. This enables horizontal scaling by adding more instances of a service behind a load balancer.\nLoad Balancing: Distribute incoming requests across multiple instances of your services to prevent single points of failure and ensure even resource utilization.\nDatabase Optimization and Scalability:\nChoose the right database: Select a database (SQL or NoSQL) that aligns with your data model and scalability requirements.\nSharding/Partitioning: Divide large datasets across multiple database instances to improve performance and scalability.\nReplication and Failover: Implement database replication for data redundancy and automatic failover mechanisms to ensure continuous availability in case of a primary database failure.\nCaching: Utilize caching layers (e.g., Redis, Memcached) to store frequently accessed data, reducing database load and improving response times.\nAsynchronous Processing and Message Queues: Use message queues (e.g., Kafka, RabbitMQ) for tasks that can be processed asynchronously, decoupling services and improving responsiveness.\nMonitoring and Alerting: Implement robust monitoring and alerting systems to detect and respond to issues proactively, ensuring high availability.\nContainerization and Orchestration: Use containerization (e.g., Docker) to package applications and their dependencies, and orchestration platforms (e.g., Kubernetes) to automate deployment, scaling, and management of containers.\nFrontend Design for Scalability and Fault Tolerance:\nComponent-Based Architecture: Build the frontend using reusable components, promoting modularity, maintainability, and easier scaling of development efforts.\nPerformance Optimization:\nCode Splitting and Lazy Loading: Reduce initial load times by loading only necessary code and components as needed.\nImage and Asset Optimization: Compress images and optimize other assets to minimize file sizes and improve loading speed.\nCaching: Leverage browser caching and Content Delivery Networks (CDNs) to deliver static assets efficiently.\nError Handling and Resilience: Implement robust error handling mechanisms, including graceful degradation, retry logic for API calls, and displaying informative error messages to users.\nResponsive Design: Ensure the application adapts to various screen sizes and devices, providing a consistent user experience across platforms.\nAPI Design: Design efficient and well-documented APIs (REST or GraphQL) to facilitate seamless communication between the frontend and backend, using versioning to manage changes over time.\nProgressive Web Apps (PWAs): Consider PWA features like offline capabilities and push notifications to enhance user experience and resilience."
+      },
+      "5": {
+        "text": "Common web security vulnerabilities include:\nInjection Flaws (e.g., SQL Injection, Command Injection): Attackers inject malicious code or commands into input fields, manipulating the application's logic or database queries.\nCross-Site Scripting (XSS): Malicious scripts are injected into web pages viewed by other users, leading to session hijacking, data theft, or defacement.\nBroken Authentication and Session Management: Weaknesses in authentication mechanisms or session handling allow attackers to impersonate users or gain unauthorized access.\nBroken Access Control: Inadequate enforcement of access policies allows users to access unauthorized resources or perform privileged actions.\nSecurity Misconfiguration: Default configurations, unpatched software, or improper settings leave systems vulnerable.\nSensitive Data Exposure: Inadequate protection of sensitive data (e.g., passwords, financial information) during storage or transmission.\nCross-Site Request Forgery (CSRF): Attackers trick authenticated users into performing unintended actions on a web application.\nUsing Components with Known Vulnerabilities: Incorporating outdated or vulnerable libraries and frameworks.\nMeasures for Addressing Vulnerabilities Across the Full Stack:\nFrontend:\nInput Validation and Sanitization: Implement client-side validation and sanitization of user input to prevent XSS and other injection attacks.\nContent Security Policy (CSP): Use CSP headers to restrict the sources from which content can be loaded, mitigating XSS risks.\nHTTPS Enforcement: Ensure all communication uses HTTPS to encrypt data in transit.\nSecure Cookie Flags: Use HttpOnly and Secure flags for cookies to prevent XSS attacks from accessing session tokens and ensure cookies are only sent over HTTPS.\nBackend:\nParameterized Queries (Prepared Statements): Use parameterized queries for all database interactions to prevent SQL injection.\nStrong Authentication and Authorization: Implement robust authentication mechanisms (e.g., multi-factor authentication) and enforce strict role-based access control.\nSecure Session Management: Generate strong, random session IDs, invalidate sessions after logout or inactivity, and use secure cookie flags.\nInput Validation and Sanitization (Server-Side): Perform comprehensive server-side validation and sanitization of all user input, even if client-side validation is present.\nError Handling and Logging: Implement secure error handling that avoids revealing sensitive system information and robust logging for security monitoring.\nSecure API Design: Design APIs with security in mind, including strong authentication, authorization, rate limiting, and input validation.\nCSRF Protection: Implement CSRF tokens or other mechanisms to prevent CSRF attacks.\nInfrastructure/Deployment:\nRegular Patching and Updates: Keep all operating systems, web servers, databases, and third-party libraries updated to address known vulnerabilities.\nNetwork Segmentation and Firewalls: Implement network segmentation and configure firewalls to restrict access to sensitive resources.\nSecurity Configuration Hardening: Follow security best practices for configuring servers, databases, and other infrastructure components.\nVulnerability Scanning and Penetration Testing: Regularly perform security scans and penetration tests to identify and address vulnerabilities proactively.\nSecure Secrets Management: Use dedicated tools and practices for securely storing and managing API keys, database credentials, and other sensitive secrets."
+      }
+    },
+    "aiResult": {
+      "perAnswer": [
+        {
+          "index": 0,
+          "score": 10,
+          "feedback": "Excellent and comprehensive answer covering core technologies, modern frameworks, and important architectural concepts like responsive design and SPAs."
+        },
+        {
+          "index": 1,
+          "score": 10,
+          "feedback": "Very thorough explanation of an API's role, covering internal communication, external integration, business logic encapsulation, and security aspects."
+        },
+        {
+          "index": 2,
+          "score": 10,
+          "feedback": "Excellent and detailed explanation of all core RESTful principles, including HATEOAS, and how they contribute to effective frontend-backend communication."
+        },
+        {
+          "index": 3,
+          "score": 10,
+          "feedback": "Comprehensive comparison and contrast, clearly outlining characteristics, scalability models, consistency properties, and appropriate use cases for both SQL and NoSQL databases."
+        },
+        {
+          "index": 4,
+          "score": 9,
+          "feedback": "Very strong and comprehensive answer covering a wide array of strategies for both backend (microservices, database scaling, async processing, containerization) and frontend (performance, error handling, PWAs) to achieve scalability and fault tolerance."
+        },
+        {
+          "index": 5,
+          "score": 10,
+          "feedback": "Excellent, detailed response covering a broad range of common vulnerabilities and providing a comprehensive set of mitigation strategies across frontend, backend, and infrastructure."
+        }
+      ],
+      "overall": {
+        "score": 98,
+        "summary": "The candidate demonstrated an outstanding understanding of fundamental and advanced full-stack web development concepts, including architecture, databases, APIs, scalability, and security. Their answers were consistently thorough, well-structured, and highly accurate."
+      }
+    },
+    "completedAt": 1759301141249
+  },
+  {
+    "id": "s-1762094833700",
+    "createdAt": 1762095030373,
+    "candidate": {
+      "name": "Le Van Minh Duc",
+      "email": "ducle090891999@gmail.com",
+      "phone": "0386413805"
+    },
+    "questions": [
+      {
+        "id": "q-0",
+        "text": "Bạn có thể mô tả vai trò của một nhà phát triển fullstack trong một dự án phần mềm điển hình không?",
+        "difficulty": "easy",
+        "timeLimit": 120
+      },
+      {
+        "id": "q-1",
+        "text": "Bạn có kinh nghiệm với cả phát triển frontend và backend không? Nếu có, công nghệ hoặc framework yêu thích của bạn ở mỗi phía là gì?",
+        "difficulty": "easy",
+        "timeLimit": 150
+      },
+      {
+        "id": "q-2",
+        "text": "Hãy giải thích cách bạn sẽ tiếp cận việc tích hợp một API của bên thứ ba vào một ứng dụng web, bao gồm các cân nhắc về bảo mật và xử lý lỗi.",
+        "difficulty": "medium",
+        "timeLimit": 240
+      },
+      {
+        "id": "q-3",
+        "text": "Bạn sẽ thiết kế một cơ sở dữ liệu cho một hệ thống quản lý người dùng với các vai trò và quyền khác nhau như thế nào? Kể tên các bảng chính và mối quan hệ của chúng.",
+        "difficulty": "medium",
+        "timeLimit": 270
+      },
+      {
+        "id": "q-4",
+        "text": "Hãy mô tả một kịch bản phức tạp mà bạn phải đối mặt trong việc tối ưu hóa hiệu suất của một ứng dụng fullstack, và bạn đã giải quyết nó như thế nào, bao gồm các công cụ và kỹ thuật bạn đã sử dụng.",
+        "difficulty": "hard",
+        "timeLimit": 360
+      },
+      {
+        "id": "q-5",
+        "text": "Giả sử bạn cần xây dựng một kiến trúc microservices cho một ứng dụng có lưu lượng truy cập cao. Bạn sẽ cân nhắc những yếu tố nào khi thiết kế, triển khai và quản lý dịch vụ giữa các miền khác nhau?",
+        "difficulty": "hard",
+        "timeLimit": 420
+      }
+    ],
+    "answers": {
+      "0": {
+        "text": "Nhà phát triển fullstack là người có khả năng làm việc ở cả frontend (giao diện người dùng) và backend (xử lý phía máy chủ) trong một ứng dụng phần mềm.",
+        "submittedAt": 1762094876807
+      },
+      "1": {
+        "text": "Có, tôi đã từng làm việc với cả hai mảng frontend và backend trong nhiều dự án phần mềm. Việc hiểu rõ cả hai phía giúp tôi xây dựng hệ thống đồng bộ, dễ bảo trì và tối ưu hiệu năng.",
+        "submittedAt": 1762094910296
+      },
+      "2": {
+        "text": "Đọc kỹ tài liệu API để hiểu các endpoint, phương thức HTTP (GET, POST...), định dạng dữ liệu (JSON, XML), giới hạn rate limit và yêu cầu xác thực.\n\nKiểm tra xem API có yêu cầu API key, OAuth2, JWT hay hình thức xác thực nào khác.",
+        "submittedAt": 1762094931239
+      },
+      "3": {
+        "text": "Users ↔ UserRoles ↔ Roles\n\nMột người dùng có thể có nhiều vai trò (nhiều dòng trong UserRoles)\n\nMột vai trò có thể được gán cho nhiều người dùng\n\nRoles ↔ RolePermissions ↔ Permissions\n\nMột vai trò có thể có nhiều quyền\n\nMột quyền có thể được gán cho nhiều vai trò",
+        "submittedAt": 1762094955450
+      },
+      "4": {
+        "text": "Trong một dự án xây dựng nền tảng thương mại điện tử, nhóm của tôi nhận thấy rằng trang chi tiết sản phẩm mất đến 5–7 giây để tải, đặc biệt khi có nhiều người dùng truy cập cùng lúc. Điều này ảnh hưởng nghiêm trọng đến trải nghiệm người dùng và tỷ lệ chuyển đổi.",
+        "submittedAt": 1762094979301
+      },
+      "5": {
+        "text": "Áp dụng Bounded Context để chia nhỏ hệ thống thành các microservice độc lập theo chức năng: người dùng, đơn hàng, sản phẩm, thanh toán...\n\nMỗi service có database riêng để tránh coupling.\n🔹 Giao tiếp giữa các dịch vụ\nDùng REST API hoặc gRPC cho giao tiếp đồng bộ.\n\nDùng message broker như Kafka, RabbitMQ cho giao tiếp bất đồng bộ (event-driven).\n\n🔹 Gateway và API Aggregation\nSử dụng API Gateway (như Kong, NGINX, hoặc AWS API Gateway) để định tuyến, xác thực và giới hạn truy cập.\n\nHỗ trợ rate limiting, caching, và load balancing.",
+        "submittedAt": 1762095010532
+      }
+    },
+    "aiResult": {
+      "perAnswer": [
+        {
+          "index": 0,
+          "score": 7,
+          "feedback": "Cung cấp định nghĩa chính xác và ngắn gọn về vai trò fullstack, nhưng có thể mở rộng thêm về tầm quan trọng hoặc các trách nhiệm cụ thể."
+        },
+        {
+          "index": 1,
+          "score": 3,
+          "feedback": "Xác nhận có kinh nghiệm nhưng thiếu thông tin về các công nghệ và framework yêu thích ở cả frontend và backend như yêu cầu của câu hỏi."
+        },
+        {
+          "index": 2,
+          "score": 4,
+          "feedback": "Trả lời tốt về bước tìm hiểu tài liệu và xác thực API ban đầu. Tuy nhiên, chưa đề cập đầy đủ về cách xử lý lỗi, các cân nhắc bảo mật toàn diện hơn, hoặc các bước tích hợp thực tế."
+        },
+        {
+          "index": 3,
+          "score": 9,
+          "feedback": "Thiết kế cơ sở dữ liệu rất hợp lý và chính xác, sử dụng các bảng trung gian (junction tables) để xử lý các mối quan hệ nhiều-nhiều cho vai trò và quyền một cách hiệu quả."
+        },
+        {
+          "index": 4,
+          "score": 2,
+          "feedback": "Mô tả rõ ràng về vấn đề hiệu suất đã gặp phải. Tuy nhiên, hoàn toàn bỏ qua phần quan trọng nhất của câu hỏi là cách giải quyết, các công cụ và kỹ thuật đã sử dụng để tối ưu hóa hiệu suất."
+        },
+        {
+          "index": 5,
+          "score": 10,
+          "feedback": "Trả lời xuất sắc và toàn diện, bao gồm các yếu tố quan trọng như phân tách dịch vụ bằng Bounded Context, quản lý cơ sở dữ liệu riêng, các phương pháp giao tiếp (đồng bộ/bất đồng bộ) và vai trò của API Gateway trong kiến trúc microservices."
+        }
+      ],
+      "overall": {
+        "score": 58,
+        "summary": "Ứng viên thể hiện kiến thức nền tảng tốt về các khái niệm fullstack, đặc biệt là thiết kế cơ sở dữ liệu và kiến trúc microservices. Tuy nhiên, khả năng giải quyết vấn đề và trình bày chi tiết các giải pháp (ví dụ: tối ưu hiệu suất, tích hợp API) còn hạn chế, thường chỉ tập trung vào mô tả vấn đề hoặc các bước ban đầu mà thiếu đi chiều sâu về công nghệ và phương pháp luận."
+      }
+    },
+    "completedAt": 1762095030358
+  },
+  {
+    "id": "s-1762096077724",
+    "createdAt": 1762096114047,
+    "candidate": {
+      "name": "Le Van Minh Duc",
+      "email": "ducle090891999@gmail.com",
+      "phone": "0386413805"
+    },
+    "questions": [
+      {
+        "id": "q-0",
+        "text": "Bạn có thể giải thích sự khác biệt cơ bản giữa phát triển frontend và backend trong một ứng dụng web không?",
+        "difficulty": "easy",
+        "timeLimit": 120
+      },
+      {
+        "id": "q-1",
+        "text": "Kể tên một số công nghệ hoặc framework phổ biến mà bạn thường sử dụng cho cả phát triển frontend và backend.",
+        "difficulty": "easy",
+        "timeLimit": 120
+      },
+      {
+        "id": "q-2",
+        "text": "Khi phát triển một API RESTful, bạn sẽ áp dụng những phương pháp hay nhất nào để đảm bảo tính bảo mật và hiệu suất?",
+        "difficulty": "medium",
+        "timeLimit": 240
+      },
+      {
+        "id": "q-3",
+        "text": "Bạn sẽ xử lý việc quản lý trạng thái phức tạp trong một ứng dụng SPA (Single Page Application) sử dụng framework như React hoặc Angular như thế nào?",
+        "difficulty": "medium",
+        "timeLimit": 240
+      },
+      {
+        "id": "q-4",
+        "text": "Giả sử bạn cần thiết kế một hệ thống để xử lý hàng triệu yêu cầu mỗi giây, bạn sẽ cân nhắc những yếu tố nào về kiến trúc cơ sở dữ liệu, caching và mở rộng quy mô?",
+        "difficulty": "hard",
+        "timeLimit": 360
+      },
+      {
+        "id": "q-5",
+        "text": "Giải thích khái niệm về kiến trúc microservices và khi nào bạn nên cân nhắc sử dụng chúng thay vì kiến trúc monolith, cũng như những thách thức đi kèm?",
+        "difficulty": "hard",
+        "timeLimit": 360
+      }
+    ],
+    "answers": {
+      "0": {
+        "text": "tyh65ju7rh6ygtrfe",
+        "submittedAt": 1762096093863
+      },
+      "1": {
+        "text": "p;lokjhgf",
+        "submittedAt": 1762096097070
+      },
+      "2": {
+        "text": "iuytr",
+        "submittedAt": 1762096098719
+      },
+      "3": {
+        "text": "lkjhgf",
+        "submittedAt": 1762096100174
+      },
+      "4": {
+        "text": ".,mnbv",
+        "submittedAt": 1762096101702
+      },
+      "5": {
+        "text": "iuytr",
+        "submittedAt": 1762096103246
+      }
+    },
+    "aiResult": {
+      "perAnswer": [
+        {
+          "index": 0,
+          "score": 0,
+          "feedback": "Câu trả lời không rõ ràng và không thể hiểu được."
+        },
+        {
+          "index": 1,
+          "score": 0,
+          "feedback": "Câu trả lời không phải là ngôn ngữ có thể hiểu được."
+        },
+        {
+          "index": 2,
+          "score": 0,
+          "feedback": "Ứng viên không đưa ra câu trả lời có ý nghĩa."
+        },
+        {
+          "index": 3,
+          "score": 0,
+          "feedback": "Câu trả lời không liên quan hoặc không thể diễn giải."
+        },
+        {
+          "index": 4,
+          "score": 0,
+          "feedback": "Phản hồi không rõ ràng và không có nội dung."
+        },
+        {
+          "index": 5,
+          "score": 0,
+          "feedback": "Câu trả lời không cung cấp thông tin hữu ích."
+        }
+      ],
+      "overall": {
+        "score": 0,
+        "summary": "Ứng viên không cung cấp bất kỳ câu trả lời rõ ràng, có ý nghĩa hoặc liên quan nào cho các câu hỏi."
+      }
+    },
+    "completedAt": 1762096114040
+  },
+  {
+    "id": "s-1762096823009",
+    "createdAt": 1762097095810,
+    "candidate": {
+      "name": "Em Chừ",
+      "email": "banoiiudau@gmail.com",
+      "phone": "0866495211"
+    },
+    "questions": [
+      {
+        "id": "q-0",
+        "text": "Bạn hiểu thế nào về vai trò của một nhà phát triển fullstack?",
+        "difficulty": "easy",
+        "timeLimit": 120
+      },
+      {
+        "id": "q-1",
+        "text": "Bạn có thể mô tả sự khác biệt cơ bản giữa phát triển frontend và backend không?",
+        "difficulty": "easy",
+        "timeLimit": 120
+      },
+      {
+        "id": "q-2",
+        "text": "Khi xây dựng một ứng dụng fullstack, bạn sẽ tiếp cận việc tích hợp API giữa frontend và backend như thế nào?",
+        "difficulty": "medium",
+        "timeLimit": 240
+      },
+      {
+        "id": "q-3",
+        "text": "Hãy nêu một số phương pháp tốt nhất để đảm bảo hiệu suất và bảo mật cơ bản cho một ứng dụng web.",
+        "difficulty": "medium",
+        "timeLimit": 240
+      },
+      {
+        "id": "q-4",
+        "text": "Nếu được yêu cầu thiết kế một hệ thống xử lý lượng lớn dữ liệu người dùng thời gian thực, bạn sẽ xem xét những yếu tố kiến trúc nào và tại sao?",
+        "difficulty": "hard",
+        "timeLimit": 360
+      },
+      {
+        "id": "q-5",
+        "text": "Hãy thảo luận về các trade-off khi chọn giữa kiến trúc microservices và kiến trúc monolith cho một dự án fullstack mới.",
+        "difficulty": "hard",
+        "timeLimit": 360
+      }
+    ],
+    "answers": {
+      "0": {
+        "text": "vai trò của fullstack là lập trình về front end và cả back end",
+        "submittedAt": 1762096866025
+      },
+      "1": {
+        "text": "front end là làm về phần giao diện, hiệu ứng, còn back end thì làm về database, xử lý logic dữ liệu",
+        "submittedAt": 1762096903467
+      },
+      "2": {
+        "text": "Phân tích các tính năng của ứng dụng: đăng nhập, hiển thị danh sách, tạo mới, cập nhật, xóa...\n\nXác định rõ các endpoint API cần thiết và dữ liệu mà frontend sẽ gửi/nhận từ backend.\nSử dụng RESTful API hoặc GraphQL tùy theo nhu cầu.\n\nĐặt tên endpoint rõ ràng, có cấu trúc: ví dụ /api/products, /api/users/:id.\n\nĐảm bảo API trả về dữ liệu ở định dạng chuẩn như JSON.\nDùng các thư viện như Axios, Fetch API, hoặc React Query để gọi API.\n\nTạo các service layer hoặc custom hooks để tách biệt logic gọi API khỏi giao diện.\n\nXử lý trạng thái tải, lỗi và dữ liệu trả về một cách rõ ràng.",
+        "submittedAt": 1762096959396
+      },
+      "3": {
+        "text": "lưu các key quan trọng vào file .env \nnâng cao bảo mật\nphần login phải xác thực 2 yếu tố, sử dụng mã hóa SHA26 hoặc base64",
+        "submittedAt": 1762097014577
+      },
+      "4": {
+        "text": "Khi thiết kế một hệ thống xử lý dữ liệu người dùng thời gian thực với lưu lượng lớn, cần xem xét nhiều yếu tố kiến trúc để đảm bảo hiệu năng, khả năng mở rộng, độ tin cậy và bảo mật. Dưới đây là các yếu tố quan trọng và lý do cần cân\nLý do: Cho phép xử lý dữ liệu ngay khi có sự kiện xảy ra (ví dụ: người dùng click, gửi tin nhắn, cập nhật trạng thái).\n\nGiải pháp: Dùng các hệ thống như Apache Kafka, RabbitMQ, hoặc AWS Kinesis để truyền và xử lý luồng dữ liệu.\nLý do: Đảm bảo hệ thống có thể xử lý hàng triệu sự kiện đồng thời bằng cách thêm nhiều node.\n\nGiải pháp: Dùng microservices kết hợp với container orchestration như Kubernetes để tự động scale.\nLý do: Phân tích và phản hồi dữ liệu ngay lập tức (ví dụ: phát hiện gian lận, đề xuất nội dung).\n\nGiải pháp: Dùng Apache Flink, Spark Streaming, hoặc Google Dataflow để xử lý luồng dữ liệu.",
+        "submittedAt": 1762097060343
+      },
+      "5": {
+        "text": "Khi bắt đầu một dự án fullstack mới, việc lựa chọn giữa kiến trúc monolith và microservices là một quyết định chiến lược quan trọng. Mỗi mô hình đều có ưu điểm và nhược điểm riêng, và lựa chọn phù hợp phụ thuộc vào quy mô, mục tiêu, đội ngũ và kỳ vọng phát triển của dự án.",
+        "submittedAt": 1762097075418
+      }
+    },
+    "aiResult": {
+      "perAnswer": [
+        {
+          "index": 0,
+          "score": 6,
+          "feedback": "Reasonable answer"
+        },
+        {
+          "index": 1,
+          "score": 8,
+          "feedback": "Reasonable answer"
+        },
+        {
+          "index": 2,
+          "score": 9,
+          "feedback": "Reasonable answer"
+        },
+        {
+          "index": 3,
+          "score": 9,
+          "feedback": "Reasonable answer"
+        },
+        {
+          "index": 4,
+          "score": 10,
+          "feedback": "Reasonable answer"
+        },
+        {
+          "index": 5,
+          "score": 10,
+          "feedback": "Reasonable answer"
+        }
+      ],
+      "overall": {
+        "score": 87,
+        "summary": "Fallback heuristic evaluation."
+      }
+    },
+    "completedAt": 1762097095802
+  },
+  {
+    "id": "s-1762100726423",
+    "createdAt": 1762100873609,
+    "candidate": {
+      "name": "Em Chừ",
+      "email": "banoiiudau@gmail.com",
+      "phone": "0866495211"
+    },
+    "questions": [
+      {
+        "id": "q-0",
+        "text": "JSX là gì và tại sao chúng ta dùng nó trong React?",
+        "difficulty": "easy",
+        "timeLimit": 120
+      },
+      {
+        "id": "q-1",
+        "text": "Giải thích sự khác biệt giữa props và state trong React.",
+        "difficulty": "easy",
+        "timeLimit": 120
+      },
+      {
+        "id": "q-2",
+        "text": "Bạn sẽ quản lý các side-effects trong 1 ứng dụng React như thế nào?",
+        "difficulty": "medium",
+        "timeLimit": 240
+      },
+      {
+        "id": "q-3",
+        "text": "Mô tả cách bạn thiết kế 1 luồng xác thực cho ứng dụng React + Node.js.",
+        "difficulty": "medium",
+        "timeLimit": 240
+      },
+      {
+        "id": "q-4",
+        "text": "Bạn sẽ tối ưu hóa một ứng dụng React chậm, bị render lại quá thường xuyên như thế nào?",
+        "difficulty": "hard",
+        "timeLimit": 360
+      },
+      {
+        "id": "q-5",
+        "text": "Giải thích cách bạn thiết kế một REST API có khả năng mở rộng cho một nền tảng tìm kiếm việc làm.",
+        "difficulty": "hard",
+        "timeLimit": 360
+      }
+    ],
+    "answers": {
+      "0": {
+        "text": "là JSX (JavaScript XML) là cú pháp mở rộng của JavaScript cho phép viết giao diện giống HTML ngay trong mã JavaScript. Trong React, JSX giúp mô tả UI một cách trực quan, dễ đọc và dễ bảo trì, đồng thời cho phép kết hợp logic và giao diện linh hoạt bằng cách chèn biểu thức JavaScript trực tiếp vào cấu trúc HTML.",
+        "submittedAt": 1762100786405
+      },
+      "1": {
+        "text": "Trong React, props là dữ liệu được truyền từ component cha xuống component con để hiển thị hoặc xử lý, còn state là dữ liệu nội bộ của một component, dùng để quản lý và thay đổi theo hành vi người dùng hoặc logic ứng dụng. Props là bất biến trong component nhận, còn state có thể thay đổi thông qua hàm setState hoặc useState.",
+        "submittedAt": 1762100807349
+      },
+      "2": {
+        "text": "Trong React, tôi quản lý các side-effects bằng cách sử dụng hook `useEffect`, cho phép thực hiện các tác vụ như gọi API, cập nhật DOM, hoặc thiết lập subscription sau khi component render. Tôi đảm bảo cleanup đúng cách để tránh memory leak, sử dụng dependency array để kiểm soát thời điểm chạy effect, và có thể kết hợp thêm các thư viện như Redux Thunk, Redux Saga hoặc React Query để xử lý side-effects phức tạp và quản lý trạng thái bất đồng bộ hiệu quả.",
+        "submittedAt": 1762100824685
+      },
+      "3": {
+        "text": "Để thiết kế luồng xác thực cho ứng dụng React + Node.js, tôi triển khai backend Node.js sử dụng JWT để tạo và xác minh token sau khi người dùng đăng nhập, lưu token ở phía client bằng HTTP-only cookie hoặc localStorage tùy mức độ bảo mật. Frontend React sẽ gửi thông tin đăng nhập qua API, nhận token và dùng nó cho các yêu cầu tiếp theo. Tôi thêm middleware xác thực ở backend để bảo vệ các route riêng tư, và xử lý tự động đăng xuất khi token hết hạn hoặc không hợp lệ.",
+        "submittedAt": 1762100839815
+      },
+      "4": {
+        "text": "Để tối ưu hóa một ứng dụng React bị chậm do render lại quá thường xuyên, tôi sử dụng các kỹ thuật như **memoization** (`React.memo`, `useMemo`, `useCallback`) để tránh render không cần thiết, **tách component** hợp lý để giảm phạm vi ảnh hưởng khi state thay đổi, **kiểm soát dependency trong `useEffect`**, và dùng **virtualization** (như `react-window`) khi hiển thị danh sách lớn. Tôi cũng kiểm tra hiệu năng bằng **React DevTools** để xác định nguyên nhân và cải thiện trải nghiệm người dùng.",
+        "submittedAt": 1762100854496
+      },
+      "5": {
+        "text": "Để thiết kế một REST API có khả năng mở rộng cho nền tảng tìm kiếm việc làm, tôi phân tách rõ các tài nguyên như người dùng, nhà tuyển dụng, công việc và ứng viên thành các endpoint riêng biệt, tuân thủ chuẩn RESTful. Tôi sử dụng phân trang, lọc và sắp xếp để tối ưu truy vấn, triển khai xác thực bằng JWT, và bảo vệ các route nhạy cảm. Backend được xây dựng với Node.js và Express, kết nối cơ sở dữ liệu có khả năng mở rộng như PostgreSQL hoặc MongoDB, kết hợp caching bằng Redis và triển khai qua Docker/Kubernetes để dễ dàng mở rộng theo nhu cầu.",
+        "submittedAt": 1762100873239
+      }
+    },
+    "aiResult": {
+      "perAnswer": [
+        {
+          "index": 0,
+          "score": 8,
+          "feedback": "Câu trả lời hợp lý"
+        },
+        {
+          "index": 1,
+          "score": 8,
+          "feedback": "Câu trả lời hợp lý"
+        },
+        {
+          "index": 2,
+          "score": 9,
+          "feedback": "Câu trả lời hợp lý"
+        },
+        {
+          "index": 3,
+          "score": 9,
+          "feedback": "Câu trả lời hợp lý"
+        },
+        {
+          "index": 4,
+          "score": 10,
+          "feedback": "Câu trả lời hợp lý"
+        },
+        {
+          "index": 5,
+          "score": 10,
+          "feedback": "Câu trả lời hợp lý"
+        }
+      ],
+      "overall": {
+        "score": 90,
+        "summary": "Đánh giá heuristic dự phòng."
+      }
+    },
+    "completedAt": 1762100873573
+  },
+  {
+    "id": "s-1762142969203",
+    "createdAt": 1762142987539,
+    "candidate": {
+      "name": "Lê Văn Cảm",
+      "email": "camlv.23itb@vku.udn.vn",
+      "phone": "0344574050"
+    },
+    "questions": [
+      {
+        "id": "q-0",
+        "text": "Bạn có thể kể một chút về kinh nghiệm và lý do bạn theo đuổi vai trò fullstack không?",
+        "difficulty": "easy",
+        "timeLimit": 120
+      },
+      {
+        "id": "q-1",
+        "text": "Hãy giải thích sự khác biệt cơ bản giữa front-end và back-end trong phát triển web.",
+        "difficulty": "easy",
+        "timeLimit": 120
+      },
+      {
+        "id": "q-2",
+        "text": "Làm thế nào bạn quản lý trạng thái trong một ứng dụng web front-end quy mô lớn?",
+        "difficulty": "medium",
+        "timeLimit": 240
+      },
+      {
+        "id": "q-3",
+        "text": "Hãy mô tả cách bạn thiết kế một API RESTful cho một ứng dụng quản lý sản phẩm, bao gồm các tài nguyên và phương thức cơ bản.",
+        "difficulty": "medium",
+        "timeLimit": 240
+      },
+      {
+        "id": "q-4",
+        "text": "Nếu một ứng dụng fullstack của bạn gặp vấn đề hiệu suất nghiêm trọng, bạn sẽ làm gì để chẩn đoán và tối ưu hóa ở cả hai phía front-end và back-end?",
+        "difficulty": "hard",
+        "timeLimit": 360
+      },
+      {
+        "id": "q-5",
+        "text": "Thảo luận về ưu và nhược điểm của kiến trúc microservices so với kiến trúc monolithic trong bối cảnh phát triển một hệ thống fullstack lớn.",
+        "difficulty": "hard",
+        "timeLimit": 360
+      }
+    ],
+    "answers": {
+      "0": {
+        "text": "",
+        "submittedAt": 1762142976502
+      },
+      "1": {
+        "text": "",
+        "submittedAt": 1762142977446
+      },
+      "2": {
+        "text": "",
+        "submittedAt": 1762142978478
+      },
+      "3": {
+        "text": "",
+        "submittedAt": 1762142978854
+      },
+      "4": {
+        "text": "",
+        "submittedAt": 1762142979687
+      },
+      "5": {
+        "text": "",
+        "submittedAt": 1762142980342
+      }
+    },
+    "aiResult": {
+      "perAnswer": [
+        {
+          "index": 0,
+          "score": 0,
+          "feedback": "Chưa có câu trả lời được cung cấp cho Q1."
+        },
+        {
+          "index": 1,
+          "score": 0,
+          "feedback": "Chưa có câu trả lời được cung cấp cho Q2."
+        },
+        {
+          "index": 2,
+          "score": 0,
+          "feedback": "Chưa có câu trả lời được cung cấp cho Q3."
+        },
+        {
+          "index": 3,
+          "score": 0,
+          "feedback": "Chưa có câu trả lời được cung cấp cho Q4."
+        },
+        {
+          "index": 4,
+          "score": 0,
+          "feedback": "Chưa có câu trả lời được cung cấp cho Q5."
+        },
+        {
+          "index": 5,
+          "score": 0,
+          "feedback": "Chưa có câu trả lời được cung cấp cho Q6."
+        }
+      ],
+      "overall": {
+        "score": 0,
+        "summary": "Không có câu trả lời nào được cung cấp cho bất kỳ câu hỏi nào. Vui lòng cung cấp câu trả lời để đánh giá."
+      }
+    },
+    "completedAt": 1762142987495
+  },
+  {
+    "id": "s-1762181958738",
+    "createdAt": 1762182055481,
+    "candidate": {
+      "name": "Lê Văn Cảm",
+      "email": "camlv.23itb@vku.udn.vn",
+      "phone": "0344574050"
+    },
+    "questions": [
+      {
+        "id": "q-0",
+        "text": "Bạn có thể mô tả quá trình phát triển web điển hình của mình không?",
+        "difficulty": "easy",
+        "timeLimit": 120
+      },
+      {
+        "id": "q-1",
+        "text": "Bạn đã làm việc với những công nghệ front-end hoặc back-end nào gần đây?",
+        "difficulty": "easy",
+        "timeLimit": 120
+      },
+      {
+        "id": "q-2",
+        "text": "Giải thích sự khác biệt giữa Server-Side Rendering (SSR) và Client-Side Rendering (CSR) và khi nào bạn nên sử dụng mỗi loại.",
+        "difficulty": "medium",
+        "timeLimit": 240
+      },
+      {
+        "id": "q-3",
+        "text": "Bạn sẽ tiếp cận việc quản lý trạng thái trong một ứng dụng front-end phức tạp như thế nào?",
+        "difficulty": "medium",
+        "timeLimit": 240
+      },
+      {
+        "id": "q-4",
+        "text": "Bạn sẽ thiết kế một hệ thống lưu trữ dữ liệu phân tán cho một ứng dụng có nhu cầu đọc/ghi cao như thế nào?",
+        "difficulty": "hard",
+        "timeLimit": 360
+      },
+      {
+        "id": "q-5",
+        "text": "Giả sử bạn cần tối ưu hóa hiệu suất của một ứng dụng web có lượng truy cập cao. Bạn sẽ thực hiện những bước nào ở cả front-end và back-end?",
+        "difficulty": "hard",
+        "timeLimit": 360
+      }
+    ],
+    "answers": {
+      "0": {
+        "text": "làm backend rồi làm frontend",
+        "submittedAt": 1762181982426
+      },
+      "1": {
+        "text": "frontend tôi sử dụng react còn backend tôi sử dụng node js với express",
+        "submittedAt": 1762182008877
+      },
+      "2": {
+        "text": "tôi không biết",
+        "submittedAt": 1762182017019
+      },
+      "3": {
+        "text": "tôi không biết",
+        "submittedAt": 1762182022868
+      },
+      "4": {
+        "text": "tôi không biết",
+        "submittedAt": 1762182029020
+      },
+      "5": {
+        "text": "tôi không biết",
+        "submittedAt": 1762182035108
+      }
+    },
+    "aiResult": {
+      "perAnswer": [
+        {
+          "index": 0,
+          "score": 3,
+          "feedback": "Ngắn hoặc thiếu chi tiết"
+        },
+        {
+          "index": 1,
+          "score": 6,
+          "feedback": "Câu trả lời hợp lý"
+        },
+        {
+          "index": 2,
+          "score": 3,
+          "feedback": "Ngắn hoặc thiếu chi tiết"
+        },
+        {
+          "index": 3,
+          "score": 3,
+          "feedback": "Ngắn hoặc thiếu chi tiết"
+        },
+        {
+          "index": 4,
+          "score": 4,
+          "feedback": "Ngắn hoặc thiếu chi tiết"
+        },
+        {
+          "index": 5,
+          "score": 4,
+          "feedback": "Ngắn hoặc thiếu chi tiết"
+        }
+      ],
+      "overall": {
+        "score": 38,
+        "summary": "Đánh giá heuristic dự phòng."
+      }
+    },
+    "completedAt": 1762182055476
+  },
+  {
+    "id": "s-1762182329170",
+    "createdAt": 1762182529461,
+    "candidate": {
+      "name": "Lê Văn Cảm",
+      "email": "camlv.23itb@vku.udn.vn",
+      "phone": "0344574050"
+    },
+    "questions": [
+      {
+        "id": "q-0",
+        "text": "Bạn có thể chia sẻ lý do bạn quan tâm đến vị trí phát triển fullstack?",
+        "difficulty": "easy",
+        "timeLimit": 120
+      },
+      {
+        "id": "q-1",
+        "text": "Bạn hiểu thế nào về sự khác biệt chính giữa phát triển front-end và back-end?",
+        "difficulty": "easy",
+        "timeLimit": 120
+      },
+      {
+        "id": "q-2",
+        "text": "Khi phát triển một ứng dụng fullstack, bạn thường lựa chọn stack công nghệ nào và tại sao?",
+        "difficulty": "medium",
+        "timeLimit": 240
+      },
+      {
+        "id": "q-3",
+        "text": "Bạn đã từng gặp phải thử thách nào khi tích hợp API giữa front-end và back-end? Bạn đã giải quyết nó như thế nào?",
+        "difficulty": "medium",
+        "timeLimit": 240
+      },
+      {
+        "id": "q-4",
+        "text": "Hãy mô tả một kiến trúc hệ thống fullstack bạn sẽ thiết kế cho một ứng dụng có khả năng mở rộng cao, hỗ trợ hàng triệu người dùng.",
+        "difficulty": "hard",
+        "timeLimit": 360
+      },
+      {
+        "id": "q-5",
+        "text": "Trong một dự án fullstack, bạn sẽ tiếp cận như thế nào để đảm bảo an ninh từ phía client đến server?",
+        "difficulty": "hard",
+        "timeLimit": 360
+      }
+    ],
+    "answers": {
+      "0": {
+        "text": "Tôi quan tâm đến vị trí phát triển fullstack vì đây là một vai trò cho phép tôi tham gia vào cả phần frontend lẫn backend của một ứng dụng, từ giao diện người dùng đến xử lý dữ liệu và logic phía máy chủ.\n\nTôi thích việc có thể nhìn thấy toàn bộ quy trình phát triển sản phẩm và đóng góp vào nhiều khía cạnh khác nhau. Ngoài ra, tôi cũng muốn nâng cao kỹ năng lập trình toàn diện, học cách phối hợp giữa các công nghệ như React, Node.js, và cơ sở dữ liệu như MongoDB hoặc PostgreSQL.\n\nVị trí này cũng giúp tôi hiểu rõ hơn về cách các hệ thống hoạt động tổng thể, từ đó có thể đưa ra giải pháp tối ưu hơn cho người dùng cuối.",
+        "submittedAt": 1762182360507
+      },
+      "1": {
+        "text": "Phát triển front-end và back-end là hai phần quan trọng trong quá trình xây dựng một ứng dụng web, nhưng mỗi phần đảm nhận vai trò khác nhau.\n\nFront-end là phần mà người dùng trực tiếp nhìn thấy và tương tác, như giao diện, bố cục, màu sắc, và các nút chức năng. Nó thường sử dụng các công nghệ như HTML, CSS, JavaScript và các framework như React hoặc Vue.\n\nNgược lại, back-end là phần xử lý phía sau, nơi diễn ra các hoạt động như lưu trữ dữ liệu, xử lý logic nghiệp vụ, xác thực người dùng, và kết nối với cơ sở dữ liệu. Các ngôn ngữ phổ biến cho back-end là Node.js, Python, Java hoặc PHP.\n\nSự khác biệt chính nằm ở việc front-end tập trung vào trải nghiệm người dùng, còn back-end đảm bảo hệ thống hoạt động ổn định và bảo mật. Khi kết hợp cả hai, ứng dụng mới có thể vận hành trơn tru và hiệu quả.",
+        "submittedAt": 1762182396820
+      },
+      "2": {
+        "text": "Khi phát triển một ứng dụng fullstack, tôi thường lựa chọn MERN stack, bao gồm MongoDB, Express.js, React và Node.js.\n\nLý do tôi chọn stack này là vì nó sử dụng JavaScript cho cả frontend và backend, giúp tôi làm việc hiệu quả hơn mà không cần chuyển đổi ngôn ngữ giữa hai phía. React giúp xây dựng giao diện người dùng linh hoạt và dễ mở rộng, trong khi Node.js và Express hỗ trợ xây dựng backend nhanh chóng, có khả năng xử lý nhiều kết nối đồng thời.\n\nNgoài ra, MongoDB là cơ sở dữ liệu NoSQL rất phù hợp với các ứng dụng hiện đại cần lưu trữ dữ liệu linh hoạt. MERN stack cũng có cộng đồng lớn, nhiều tài liệu hỗ trợ, và dễ triển khai trên các nền tảng đám mây như Vercel hoặc Heroku.",
+        "submittedAt": 1762182422337
+      },
+      "3": {
+        "text": "Một trong những thử thách tôi từng gặp khi tích hợp API giữa front-end và back-end là vấn đề CORS (Cross-Origin Resource Sharing). Khi gọi API từ frontend, trình duyệt chặn yêu cầu vì nguồn gốc không khớp với backend, dẫn đến lỗi không thể lấy dữ liệu.\n\nBan đầu tôi khá bối rối vì API hoạt động tốt trên Postman nhưng lại không hoạt động trong trình duyệt. Sau khi kiểm tra kỹ, tôi nhận ra backend chưa được cấu hình để cho phép truy cập từ domain của frontend.\n\nĐể giải quyết, tôi đã thêm cấu hình CORS vào server Node.js bằng middleware cors, và chỉ định rõ domain được phép truy cập. Sau khi cập nhật, frontend có thể gọi API thành công mà không bị chặn.\n\nQua trải nghiệm này, tôi hiểu rõ hơn về bảo mật khi giao tiếp giữa các tầng ứng dụng và tầm quan trọng của việc kiểm tra kỹ môi trường triển khai.",
+        "submittedAt": 1762182459598
+      },
+      "4": {
+        "text": "Để xây dựng một ứng dụng fullstack có khả năng mở rộng cao và hỗ trợ hàng triệu người dùng, tôi sẽ thiết kế kiến trúc theo mô hình microservices kết hợp với cloud-native technologies.\n\nỞ phía frontend, tôi sẽ sử dụng React hoặc Next.js để tối ưu hiệu suất và hỗ trợ rendering phía server (SSR) khi cần. Giao diện sẽ được triển khai trên CDN như Cloudflare để tăng tốc độ tải và giảm độ trễ.\n\nPhía backend sẽ được chia thành các microservice độc lập, mỗi service đảm nhiệm một chức năng cụ thể như xác thực người dùng, xử lý thanh toán, quản lý nội dung… Các service này sẽ được viết bằng Node.js hoặc Go, giao tiếp qua API Gateway và sử dụng giao thức REST hoặc gRPC.\n\nCơ sở dữ liệu sẽ được thiết kế theo mô hình phân tán, sử dụng PostgreSQL cho dữ liệu quan hệ và Redis/MongoDB cho dữ liệu phi cấu trúc hoặc cache. Để đảm bảo khả năng mở rộng, tôi sẽ triển khai hệ thống trên Kubernetes, sử dụng Docker để đóng gói các service.\n\nNgoài ra, tôi sẽ tích hợp các công cụ như Prometheus và Grafana để giám sát hiệu suất, ElasticSearch để tìm kiếm nhanh, và RabbitMQ hoặc Kafka để xử lý hàng đợi và các tác vụ bất đồng bộ.\n\nKiến trúc này giúp hệ thống linh hoạt, dễ mở rộng theo chiều ngang, và đảm bảo hiệu suất cao khi lượng người dùng tăng mạnh.",
+        "submittedAt": 1762182489259
+      },
+      "5": {
+        "text": "Để đảm bảo an ninh toàn diện trong một dự án fullstack, tôi tiếp cận theo nguyên tắc bảo mật theo từng lớp (layered security), từ phía client đến server.\n\nỞ phía client, tôi đảm bảo rằng dữ liệu người dùng được xử lý cẩn thận, không lưu trữ thông tin nhạy cảm trên trình duyệt, và sử dụng HTTPS để mã hóa toàn bộ giao tiếp. Tôi cũng triển khai các biện pháp như xác thực đầu vào (input validation) để ngăn chặn các cuộc tấn công như XSS (Cross-Site Scripting).\n\nỞ phía frontend, tôi sử dụng các thư viện đáng tin cậy, cập nhật thường xuyên, và tránh để lộ thông tin nhạy cảm trong mã nguồn hoặc console. Tôi cũng cấu hình CSP (Content Security Policy) để giới hạn các nguồn tài nguyên được phép tải.\n\nỞ phía backend, tôi triển khai xác thực và phân quyền chặt chẽ (authentication & authorization), sử dụng JWT hoặc OAuth2 để quản lý phiên đăng nhập. Tôi cũng mã hóa dữ liệu nhạy cảm như mật khẩu bằng các thuật toán như bcrypt, và bảo vệ API bằng rate limiting, kiểm tra CSRF token, và logging để phát hiện hành vi bất thường.\n\nCuối cùng, tôi thường xuyên kiểm tra lỗ hổng bảo mật bằng các công cụ như OWASP ZAP hoặc kiểm thử thủ công, và cập nhật các gói thư viện để tránh các lỗ hổng đã biết.",
+        "submittedAt": 1762182512955
+      }
+    },
+    "aiResult": {
+      "perAnswer": [
+        {
+          "index": 0,
+          "score": 9,
+          "feedback": "Trả lời rõ ràng, thể hiện sự hiểu biết sâu sắc về vai trò fullstack và động lực cá nhân mạnh mẽ. Nêu bật cả lợi ích về kỹ năng và hiệu quả dự án."
+        },
+        {
+          "index": 1,
+          "score": 9,
+          "feedback": "Giải thích rành mạch, phân biệt rõ ràng vai trò và công nghệ của front-end và back-end. Cung cấp cái nhìn toàn diện về sự tương tác giữa hai phần."
+        },
+        {
+          "index": 2,
+          "score": 9,
+          "feedback": "Nêu rõ lựa chọn MERN stack và đưa ra lý do thuyết phục, tập trung vào hiệu quả làm việc, ưu điểm kỹ thuật của từng thành phần và lợi ích cộng đồng."
+        },
+        {
+          "index": 3,
+          "score": 8,
+          "feedback": "Câu trả lời thực tế, mô tả chi tiết thử thách CORS và cách giải quyết hiệu quả. Thể hiện khả năng nhận diện vấn đề và áp dụng kiến thức để khắc phục."
+        },
+        {
+          "index": 4,
+          "score": 10,
+          "feedback": "Trình bày kiến trúc hệ thống mở rộng rất chi tiết và bài bản, sử dụng nhiều công nghệ tiên tiến phù hợp với quy mô lớn (microservices, Kubernetes, CDN, DB phân tán, caching, message queues). Thể hiện kiến thức sâu rộng về kiến trúc."
+        },
+        {
+          "index": 5,
+          "score": 9,
+          "feedback": "Đưa ra các biện pháp bảo mật toàn diện từ client đến server, thể hiện sự hiểu biết sâu sắc về các mối đe dọa và cách phòng chống hiệu quả (XSS, Auth/Authz, mã hóa, CSRF, CSP)."
+        }
+      ],
+      "overall": {
+        "score": 92,
+        "summary": "Ứng viên thể hiện kiến thức vững chắc và kinh nghiệm thực tế về phát triển fullstack. Các câu trả lời chi tiết, chuyên nghiệp và có chiều sâu về cả công nghệ, kiến trúc hệ thống và bảo mật."
+      }
+    },
+    "completedAt": 1762182529453
+  },
+  {
+    "id": "s-1762248822092",
+    "createdAt": 1762248930884,
+    "candidate": {
+      "name": "Le Van Minh Duc",
+      "email": "ducle090891999@gmail.com",
+      "phone": "0386413805"
+    },
+    "questions": [
+      {
+        "id": "q-0",
+        "text": "Bạn hiểu thế nào về vai trò của một nhà phát triển fullstack?",
+        "difficulty": "easy",
+        "timeLimit": 120
+      },
+      {
+        "id": "q-1",
+        "text": "Bạn có thể kể tên một số công nghệ front-end và back-end mà bạn quen thuộc?",
+        "difficulty": "easy",
+        "timeLimit": 120
+      },
+      {
+        "id": "q-2",
+        "text": "Khi xây dựng một ứng dụng fullstack, bạn sẽ cân nhắc những yếu tố nào để chọn kiến trúc phù hợp giữa front-end và back-end?",
+        "difficulty": "medium",
+        "timeLimit": 240
+      },
+      {
+        "id": "q-3",
+        "text": "Hãy giải thích quy trình bạn thường áp dụng để xử lý lỗi (debugging) trong một ứng dụng fullstack.",
+        "difficulty": "medium",
+        "timeLimit": 240
+      },
+      {
+        "id": "q-4",
+        "text": "Bạn sẽ thiết kế một hệ thống fullstack như thế nào để xử lý hàng triệu yêu cầu đồng thời và đảm bảo khả năng mở rộng?",
+        "difficulty": "hard",
+        "timeLimit": 480
+      },
+      {
+        "id": "q-5",
+        "text": "Giải thích sự khác biệt giữa Server-Side Rendering (SSR) và Client-Side Rendering (CSR), và khi nào bạn nên ưu tiên sử dụng mỗi loại trong phát triển fullstack?",
+        "difficulty": "hard",
+        "timeLimit": 420
+      }
+    ],
+    "answers": {
+      "0": {
+        "text": "làm tất cả mọi thứ về website",
+        "submittedAt": 1762248863639
+      },
+      "1": {
+        "text": "frontend sử dụng react, backend sử dụng node js và express",
+        "submittedAt": 1762248901606
+      },
+      "2": {
+        "text": "",
+        "submittedAt": 1762248903693
+      },
+      "3": {
+        "text": "",
+        "submittedAt": 1762248904744
+      },
+      "4": {
+        "text": "",
+        "submittedAt": 1762248905428
+      },
+      "5": {
+        "text": "",
+        "submittedAt": 1762248910803
+      }
+    },
+    "aiResult": {
+      "perAnswer": [
+        {
+          "index": 0,
+          "score": 2,
+          "feedback": "Câu trả lời quá đơn giản, chưa thể hiện được sự hiểu biết đầy đủ về vai trò phức tạp của một nhà phát triển fullstack, bao gồm cả database, API, deployment, và quản lý dự án."
+        },
+        {
+          "index": 1,
+          "score": 5,
+          "feedback": "Kể tên được các công nghệ phổ biến (React, Node.js, Express) nhưng chưa đa dạng, cho thấy phạm vi quen thuộc còn hạn chế. Nên kể thêm các framework/thư viện khác, database, công cụ devops..."
+        },
+        {
+          "index": 2,
+          "score": 0,
+          "feedback": "Không có câu trả lời."
+        },
+        {
+          "index": 3,
+          "score": 0,
+          "feedback": "Không có câu trả lời."
+        },
+        {
+          "index": 4,
+          "score": 0,
+          "feedback": "Không có câu trả lời."
+        },
+        {
+          "index": 5,
+          "score": 0,
+          "feedback": "Không có câu trả lời."
+        }
+      ],
+      "overall": {
+        "score": 10,
+        "summary": "Ứng viên thể hiện kiến thức cơ bản rất hạn chế, đặc biệt là không cung cấp được câu trả lời cho phần lớn các câu hỏi kỹ thuật quan trọng và chuyên sâu. Các câu trả lời có sẵn còn sơ sài và thiếu chiều sâu."
+      }
+    },
+    "completedAt": 1762248930875
+  },
+  {
+    "id": "s-1762249456331",
+    "createdAt": 1762249889436,
+    "candidate": {
+      "name": "Lê Văn Cảm",
+      "email": "camlv.23itb@vku.udn.vn",
+      "phone": "0344574050"
+    },
+    "questions": [
+      {
+        "id": "q-0",
+        "text": "Tại sao bạn muốn trở thành một nhà phát triển Java?",
+        "difficulty": "easy",
+        "timeLimit": 120
+      },
+      {
+        "id": "q-1",
+        "text": "Bạn có thể giải thích sự khác biệt giữa `public`, `private` và `protected` trong Java không?",
+        "difficulty": "easy",
+        "timeLimit": 120
+      },
+      {
+        "id": "q-2",
+        "text": "Bạn có thể giải thích các nguyên tắc SOLID trong lập trình hướng đối tượng không?",
+        "difficulty": "medium",
+        "timeLimit": 240
+      },
+      {
+        "id": "q-3",
+        "text": "Hãy mô tả cách bạn sẽ sử dụng `try-catch-finally` để xử lý ngoại lệ trong Java.",
+        "difficulty": "medium",
+        "timeLimit": 240
+      },
+      {
+        "id": "q-4",
+        "text": "Làm thế nào bạn có thể tránh được Deadlock trong môi trường đa luồng Java?",
+        "difficulty": "hard",
+        "timeLimit": 360
+      },
+      {
+        "id": "q-5",
+        "text": "Hãy giải thích chi tiết về cơ chế Garbage Collection trong JVM và các loại Garbage Collector bạn biết.",
+        "difficulty": "hard",
+        "timeLimit": 360
+      }
+    ],
+    "answers": {
+      "0": {
+        "text": "",
+        "submittedAt": 1762249540588
+      },
+      "1": {
+        "text": "khác nhau ở phạm vi truy cập của tính đóng gói => hạn chế những tương tác bên ngoài không mong muốn và kiểm soát được dữ liệu",
+        "submittedAt": 1762249628566
+      },
+      "2": {
+        "text": "5 nguyên tác viết code sạch",
+        "submittedAt": 1762249650898
+      },
+      "3": {
+        "text": "try-catch dùng để bắt lỗi ứng dụng như mất kết nối database => KHÔNG DÙNG ĐỂ BẮT LỖI HỆ THỐNG VÀ LỖI LOGIC",
+        "submittedAt": 1762249736195
+      },
+      "4": {
+        "text": "dùng giải thuật lập lịch cho từng luồng",
+        "submittedAt": 1762249776661
+      },
+      "5": {
+        "text": ".java => biên dịch sang => .javac => gọi JRT để biên dịch thành ngôn ngữ trung gian => mỗi JVM sẽ biên dịch sang mã của mình cho hệ điều hành riêng của nó",
+        "submittedAt": 1762249873899
+      }
+    },
+    "aiResult": {
+      "perAnswer": [
+        {
+          "index": 0,
+          "score": 0,
+          "feedback": "Không có câu trả lời cho câu hỏi về động lực."
+        },
+        {
+          "index": 1,
+          "score": 3,
+          "feedback": "Giải thích đúng mục đích của từ khóa truy cập liên quan đến tính đóng gói, nhưng chưa nêu rõ sự khác biệt cụ thể giữa `public`, `private` và `protected`."
+        },
+        {
+          "index": 2,
+          "score": 1,
+          "feedback": "Chưa giải thích các nguyên tắc SOLID là gì, chỉ nêu chung chung mục đích của chúng."
+        },
+        {
+          "index": 3,
+          "score": 4,
+          "feedback": "Nêu được một phần mục đích của `try-catch` và lưu ý quan trọng, nhưng bỏ qua khối `finally` và chưa mô tả chi tiết cách sử dụng."
+        },
+        {
+          "index": 4,
+          "score": 2,
+          "feedback": "Câu trả lời quá chung chung ('dùng giải thuật lập lịch'), chưa nêu được các giải pháp cụ thể và phổ biến để tránh Deadlock trong môi trường đa luồng Java."
+        },
+        {
+          "index": 5,
+          "score": 0,
+          "feedback": "Câu trả lời hoàn toàn không liên quan đến cơ chế Garbage Collection mà mô tả quá trình biên dịch và thực thi code Java."
+        }
+      ],
+      "overall": {
+        "score": 15,
+        "summary": "Ứng viên thể hiện kiến thức cơ bản về Java còn rất hạn chế. Nhiều câu trả lời không đầy đủ, không chính xác, hoặc hoàn toàn không liên quan đến câu hỏi. Cần bổ sung kiến thức nền tảng vững chắc hơn về các khái niệm cốt lõi của Java và OOP."
+      }
+    },
+    "completedAt": 1762249889402
+  },
+  {
+    "id": "s-1762250065514",
+    "createdAt": 1762250456579,
+    "candidate": {
+      "name": "Lê Văn Cảm",
+      "email": "camlv.23itb@vku.udn.vn",
+      "phone": "0344574050"
+    },
+    "questions": [
+      {
+        "id": "q-0",
+        "text": "Mục đích chính của Lập trình hướng đối tượng (OOP) là gì?",
+        "difficulty": "easy",
+        "timeLimit": 120
+      },
+      {
+        "id": "q-1",
+        "text": "Trong OOP, đâu là sự khác biệt cơ bản giữa một class và một object?",
+        "difficulty": "easy",
+        "timeLimit": 120
+      },
+      {
+        "id": "q-2",
+        "text": "Hãy giải thích khái niệm Đóng gói (Encapsulation) trong OOP và cung cấp một ví dụ đơn giản về cách nó được sử dụng.",
+        "difficulty": "medium",
+        "timeLimit": 240
+      },
+      {
+        "id": "q-3",
+        "text": "Bạn có thể mô tả sự khác biệt giữa Kế thừa (Inheritance) và Đa hình (Polymorphism) trong OOP không?",
+        "difficulty": "medium",
+        "timeLimit": 240
+      },
+      {
+        "id": "q-4",
+        "text": "Hãy giải thích khái niệm Trừu tượng (Abstraction) trong OOP. Nó liên quan đến các interface và abstract class như thế nào, và khi nào bạn chọn một cái này thay vì cái kia?",
+        "difficulty": "hard",
+        "timeLimit": 360
+      },
+      {
+        "id": "q-5",
+        "text": "Mô tả một tình huống mà việc sử dụng thành phần (composition) sẽ là một lựa chọn thiết kế tốt hơn so với kế thừa (inheritance), và giải thích lý do tại sao.",
+        "difficulty": "hard",
+        "timeLimit": 360
+      }
+    ],
+    "answers": {
+      "0": {
+        "text": "Chuyển từ hướng cấu trúc => sang hướng đối tượng => chia nhỏ model",
+        "submittedAt": 1762250135562
+      },
+      "1": {
+        "text": "1 class là 1 khuôn mẫu , class chỉ chứa phương thức và thuộc tính mà không chiếm bộ nhớ\nobject là 1 thực thể được tạo từ class",
+        "submittedAt": 1762250192361
+      },
+      "2": {
+        "text": "tính đóng gói là 1 cơ chế bảo vệ dữ liệu bằng cách hạn chế truy cập thông qua các accessmodifier",
+        "submittedAt": 1762250251131
+      },
+      "3": {
+        "text": "kế thừa là kế thừa các thuộc tính và phương thức của class cha cho class con\nđa hình là 1 phương thức có nhiều cách triển khai khác nhau",
+        "submittedAt": 1762250322957
+      },
+      "4": {
+        "text": "hiển thị những cái bên ngoài 1 cách trực quan mà không hiển thị chi tiết cách triển khai bên không",
+        "submittedAt": 1762250387915
+      },
+      "5": {
+        "text": "tôi không biết",
+        "submittedAt": 1762250427426
+      }
+    },
+    "aiResult": {
+      "perAnswer": [
+        {
+          "index": 0,
+          "score": 5,
+          "feedback": "Cần làm rõ hơn về các lợi ích chính của OOP như tái sử dụng code, bảo trì dễ dàng và quản lý sự phức tạp."
+        },
+        {
+          "index": 1,
+          "score": 9,
+          "feedback": "Giải thích rõ ràng và chính xác về sự khác biệt cơ bản giữa class và object."
+        },
+        {
+          "index": 2,
+          "score": 6,
+          "feedback": "Định nghĩa đúng một phần về đóng gói (Encapsulation) nhưng còn thiếu ý 'gom nhóm dữ liệu và phương thức' và chưa cung cấp ví dụ."
+        },
+        {
+          "index": 3,
+          "score": 8,
+          "feedback": "Giải thích đúng và rõ ràng về cả Kế thừa và Đa hình."
+        },
+        {
+          "index": 4,
+          "score": 5,
+          "feedback": "Giải thích tốt về Abstraction nhưng bỏ qua phần quan trọng về mối liên hệ với interface và abstract class, cũng như khi nào nên chọn cái nào."
+        },
+        {
+          "index": 5,
+          "score": 0,
+          "feedback": "Ứng viên không biết câu trả lời cho câu hỏi này. Cần tìm hiểu thêm về Composition và so sánh với Inheritance."
+        }
+      ],
+      "overall": {
+        "score": 55,
+        "summary": "Ứng viên có kiến thức cơ bản về Lập trình hướng đối tượng, đặc biệt là các khái niệm về class, object, kế thừa và đa hình. Tuy nhiên, còn nhiều điểm cần cải thiện, đặc biệt là ở các khái niệm nâng cao hơn như Trừu tượng (liên quan đến interface/abstract class) và Thành phần (Composition), cũng như việc cung cấp ví dụ cụ thể để minh họa các khái niệm."
+      }
+    },
+    "completedAt": 1762250456568
+  },
+  {
+    "id": "s-1762250740792",
+    "createdAt": 1762250836731,
+    "candidate": {
+      "name": "Le Van Minh Duc",
+      "email": "ducle090891999@gmail.com",
+      "phone": "0386413805"
+    },
+    "questions": [
+      {
+        "id": "q-0",
+        "text": "Sự khác biệt giữa nullptr, NULL và 0 trong C++ là gì?",
+        "difficulty": "easy",
+        "timeLimit": 120
+      },
+      {
+        "id": "q-1",
+        "text": "Giải thích khái niệm RAII (Resource Acquisition Is Initialization) trong C++ và cung cấp một ví dụ đơn giản.",
+        "difficulty": "easy",
+        "timeLimit": 180
+      },
+      {
+        "id": "q-2",
+        "text": "Mô tả sự khác biệt giữa std::move và std::forward, và khi nào bạn sẽ sử dụng từng cái?",
+        "difficulty": "medium",
+        "timeLimit": 240
+      },
+      {
+        "id": "q-3",
+        "text": "Các hàm ảo (virtual functions) và hàm ảo thuần túy (pure virtual functions) hoạt động như thế nào trong C++ và mục đích của chúng trong tính đa hình (polymorphism) là gì?",
+        "difficulty": "medium",
+        "timeLimit": 240
+      },
+      {
+        "id": "q-4",
+        "text": "Giải thích vấn đề ABA trong lập trình đồng thời và thảo luận các chiến lược phổ biến để giảm thiểu nó, đặc biệt trong các cấu trúc dữ liệu không khóa (lock-free data structures).",
+        "difficulty": "hard",
+        "timeLimit": 360
+      },
+      {
+        "id": "q-5",
+        "text": "Thảo luận về cơ chế phân bổ lại (reallocation) của std::vector và cách nó ảnh hưởng đến hiệu suất. Làm thế nào để tối ưu hóa việc sử dụng std::vector để giảm thiểu số lần phân bổ lại?",
+        "difficulty": "hard",
+        "timeLimit": 360
+      }
+    ],
+    "answers": {
+      "0": {
+        "text": "",
+        "submittedAt": 1762250825879
+      },
+      "1": {
+        "text": "",
+        "submittedAt": 1762250827159
+      },
+      "2": {
+        "text": "",
+        "submittedAt": 1762250827567
+      },
+      "3": {
+        "text": "",
+        "submittedAt": 1762250828703
+      },
+      "4": {
+        "text": "",
+        "submittedAt": 1762250829119
+      },
+      "5": {
+        "text": "",
+        "submittedAt": 1762250829816
+      }
+    },
+    "aiResult": {
+      "perAnswer": [
+        {
+          "index": 0,
+          "score": 0,
+          "feedback": "Thí sinh không cung cấp câu trả lời."
+        },
+        {
+          "index": 1,
+          "score": 0,
+          "feedback": "Thí sinh không cung cấp câu trả lời."
+        },
+        {
+          "index": 2,
+          "score": 0,
+          "feedback": "Thí sinh không cung cấp câu trả lời."
+        },
+        {
+          "index": 3,
+          "score": 0,
+          "feedback": "Thí sinh không cung cấp câu trả lời."
+        },
+        {
+          "index": 4,
+          "score": 0,
+          "feedback": "Thí sinh không cung cấp câu trả lời."
+        },
+        {
+          "index": 5,
+          "score": 0,
+          "feedback": "Thí sinh không cung cấp câu trả lời."
+        }
+      ],
+      "overall": {
+        "score": 0,
+        "summary": "Thí sinh không cung cấp bất kỳ câu trả lời nào cho các câu hỏi đã đưa ra. Do đó, không thể đánh giá kiến thức chuyên môn."
+      }
+    },
+    "completedAt": 1762250836714
+  },
+  {
+    "id": "s-1762250901690",
+    "createdAt": 1762251175770,
+    "candidate": {
+      "name": "Lê Văn Cảm",
+      "email": "camlv.23itb@vku.udn.vn",
+      "phone": "0344574050"
+    },
+    "questions": [
+      {
+        "id": "q-0",
+        "text": "Mục đích của khai báo DOCTYPE trong HTML là gì?",
+        "difficulty": "easy",
+        "timeLimit": 90
+      },
+      {
+        "id": "q-1",
+        "text": "Hãy giải thích mô hình hộp (Box Model) trong CSS.",
+        "difficulty": "easy",
+        "timeLimit": 120
+      },
+      {
+        "id": "q-2",
+        "text": "Mô tả các cách khác nhau để đạt được thiết kế đáp ứng (responsive design) bằng CSS.",
+        "difficulty": "medium",
+        "timeLimit": 240
+      },
+      {
+        "id": "q-3",
+        "text": "Tại sao HTML ngữ nghĩa (semantic HTML) lại quan trọng và nó liên quan như thế nào đến khả năng tiếp cận (accessibility)?",
+        "difficulty": "medium",
+        "timeLimit": 180
+      },
+      {
+        "id": "q-4",
+        "text": "Giải thích tính đặc hiệu (specificity) của CSS và cách nó ảnh hưởng đến việc áp dụng kiểu. Những vấn đề phổ biến nào liên quan đến tính đặc hiệu và làm thế nào để quản lý chúng trong các dự án lớn?",
+        "difficulty": "hard",
+        "timeLimit": 300
+      },
+      {
+        "id": "q-5",
+        "text": "Mô tả đường dẫn hiển thị quan trọng (critical rendering path). Bạn có thể tối ưu hóa HTML và CSS như thế nào để cải thiện hiệu suất tải trang?",
+        "difficulty": "hard",
+        "timeLimit": 360
+      }
+    ],
+    "answers": {
+      "0": {
+        "text": "Là định dạng của 1 file html",
+        "submittedAt": 1762250930370
+      },
+      "1": {
+        "text": "dùng để chia khối",
+        "submittedAt": 1762250953703
+      },
+      "2": {
+        "text": "dùng thuộc tính media theo từng giới hạn pixel",
+        "submittedAt": 1762250993427
+      },
+      "3": {
+        "text": "sử dụng đúng thẻ html theo đúng chức năng của nó",
+        "submittedAt": 1762251029719
+      },
+      "4": {
+        "text": "tôi cần câu trả lời từ bạn",
+        "submittedAt": 1762251064388
+      },
+      "5": {
+        "text": "dùng async và await, promise, callback",
+        "submittedAt": 1762251146419
+      }
+    },
+    "aiResult": {
+      "perAnswer": [
+        {
+          "index": 0,
+          "score": 2,
+          "feedback": "Câu trả lời còn quá chung chung và chưa chính xác. DOCTYPE giúp trình duyệt hiểu phiên bản HTML đang được sử dụng để hiển thị trang đúng cách (chế độ chuẩn)."
+        },
+        {
+          "index": 1,
+          "score": 3,
+          "feedback": "Giải thích còn rất thiếu sót. Box Model bao gồm content, padding, border và margin, là cơ sở để bố cục các phần tử HTML, không chỉ đơn thuần là 'chia khối'."
+        },
+        {
+          "index": 2,
+          "score": 6,
+          "feedback": "Media queries là một cách đúng nhưng chưa đầy đủ. Responsive design còn liên quan đến grid linh hoạt, hình ảnh linh hoạt, và viewport units."
+        },
+        {
+          "index": 3,
+          "score": 7,
+          "feedback": "Giải thích đúng về HTML ngữ nghĩa là gì. Nó quan trọng vì giúp tăng khả năng đọc hiểu code, tốt cho SEO và đặc biệt là cải thiện khả năng tiếp cận cho người dùng sử dụng các thiết bị hỗ trợ."
+        },
+        {
+          "index": 4,
+          "score": 0,
+          "feedback": "Bạn không cung cấp câu trả lời cho câu hỏi này."
+        },
+        {
+          "index": 5,
+          "score": 1,
+          "feedback": "Câu trả lời của bạn tập trung vào JavaScript bất đồng bộ, không liên quan trực tiếp đến Critical Rendering Path và cách tối ưu HTML/CSS để cải thiện hiệu suất tải trang."
+        }
+      ],
+      "overall": {
+        "score": 32,
+        "summary": "Thí sinh có kiến thức cơ bản về một số khái niệm HTML/CSS nhưng còn nhiều chỗ hiểu sai hoặc thiếu sót nghiêm trọng, đặc biệt là về Critical Rendering Path và tính đặc hiệu của CSS. Cần cải thiện sâu hơn về kiến thức nền tảng."
+      }
+    },
+    "completedAt": 1762251175746
+  },
+  {
+    "id": "s-1763996111325",
+    "createdAt": 1763996429310,
+    "candidate": {
+      "name": "Lê Văn Cảm",
+      "email": "camlv.23itb@vku.udn.vn",
+      "phone": "0344574050"
+    },
+    "questions": [
+      {
+        "id": "q-0",
+        "text": "Bạn có thể mô tả quy trình phát triển cơ bản của một ứng dụng web từ frontend đến backend không?",
+        "difficulty": "easy",
+        "timeLimit": 120
+      },
+      {
+        "id": "q-1",
+        "text": "Bạn đã có kinh nghiệm làm việc với những ngôn ngữ lập trình, framework hoặc thư viện nào phổ biến cho cả frontend và backend?",
+        "difficulty": "easy",
+        "timeLimit": 120
+      },
+      {
+        "id": "q-2",
+        "text": "Giải thích sự khác biệt giữa kiến trúc microservices và monolithic, và khi nào bạn nên chọn kiến trúc này hơn kiến trúc kia cho một ứng dụng fullstack?",
+        "difficulty": "medium",
+        "timeLimit": 240
+      },
+      {
+        "id": "q-3",
+        "text": "Làm thế nào bạn tiếp cận việc tối ưu hóa hiệu suất của một ứng dụng web fullstack, từ phía client đến phía server và cơ sở dữ liệu?",
+        "difficulty": "medium",
+        "timeLimit": 240
+      },
+      {
+        "id": "q-4",
+        "text": "Giả sử bạn cần xây dựng một ứng dụng thời gian thực có khả năng mở rộng cao (ví dụ: ứng dụng chat), bạn sẽ thiết kế kiến trúc hệ thống như thế nào và lựa chọn công nghệ cụ thể nào cho cả frontend và backend, và tại sao?",
+        "difficulty": "hard",
+        "timeLimit": 360
+      },
+      {
+        "id": "q-5",
+        "text": "Trình bày các bước và cân nhắc quan trọng để đảm bảo tính bảo mật cho một ứng dụng fullstack, bao gồm cả việc quản lý xác thực, ủy quyền, bảo vệ dữ liệu và chống lại các lỗ hổng phổ biến?",
+        "difficulty": "hard",
+        "timeLimit": 360
+      }
+    ],
+    "answers": {
+      "0": {
+        "text": "Thiết kế UI/UX: Xác định bố cục, màu sắc, trải nghiệm người dùng (dùng Figma, Sketch…).\n\nHTML/CSS/JavaScript: Xây dựng cấu trúc, định dạng và hành vi của trang web.\n\nFrameworks: Sử dụng React, Angular, Vue… để tạo ứng dụng động, dễ quản lý.\n\nTích hợp API: Gọi dữ liệu từ backend thông qua HTTP request (REST hoặc GraphQL).\n\nKiểm thử giao diện: Đảm bảo hiển thị đúng trên nhiều thiết bị và trình duyệt.",
+        "submittedAt": 1763996156605
+      },
+      "1": {
+        "text": "Ngôn ngữ cơ bản:\n\nHTML5: cấu trúc nội dung.\n\nCSS3: định dạng, responsive design.\n\nJavaScript (ES6+): xử lý logic phía client.\n\nFrameworks / Libraries:\n\nReact.js: phổ biến nhất hiện nay, mạnh về component và state management.\n\nVue.js: nhẹ, dễ học, linh hoạt.\n\nAngular: mạnh mẽ, phù hợp dự án lớn.\n\nCSS frameworks: Tailwind CSS, Bootstrap, Material UI.\n\nBuild tools: Webpack, Vite, Babel.",
+        "submittedAt": 1763996180275
+      },
+      "2": {
+        "text": "Đặc điểm:\n\nToàn bộ ứng dụng (frontend, backend, logic, database) được đóng gói thành một khối duy nhất.\n\nTriển khai và cập nhật phải thực hiện trên toàn bộ ứng dụng.\n\nƯu điểm:\n\nĐơn giản, dễ phát triển ban đầu.\n\nDễ kiểm thử và triển khai cho ứng dụng nhỏ.\n\nNhược điểm:\n\nKhó mở rộng khi ứng dụng lớn dần.\n\nMột lỗi nhỏ có thể ảnh hưởng toàn hệ thống.",
+        "submittedAt": 1763996212173
+      },
+      "3": {
+        "text": "Giảm kích thước tải xuống:\n\nNén và tối ưu hình ảnh (WebP, lazy loading).\n\nDùng minify cho CSS/JS, loại bỏ code thừa.\n\nCaching:\n\nSử dụng browser cache và service workers (PWA).\n\nCDN để phân phối nội dung tĩnh nhanh hơn.\n\nTối ưu render:\n\nVirtual DOM (React, Vue).\n\nSSR (Server-Side Rendering) hoặc SSG (Static Site Generation) để giảm thời gian tải ban đầu.\n\nGiảm số lượng request:\n\nKết hợp file, dùng HTTP/2 hoặc HTTP/3 để tải song song.",
+        "submittedAt": 1763996301923
+      },
+      "4": {
+        "text": "Khung và kết xuất:\n\nNext.js (React) cho SSR/SSG giúp tải ban đầu nhanh, SEO tốt, và chia nhỏ bundle.\n\nVite cho môi trường dev nhanh, tree-shaking tốt trong build production.\n\nRealtime transport:\n\nWebSocket (qua Socket.IO hoặc native ws) cho kênh hai chiều, fallback khi cần.\n\nWebRTC nếu có gọi audio/video hoặc P2P data channel.\n\nQuản lý trạng thái:\n\nRedux Toolkit hoặc Zustand cho state client; React Query cho sync với server và cache.\n\nTối ưu UX:\n\nOptimistic updates cho gửi tin nhắn nhanh, rollback khi lỗi.",
+        "submittedAt": 1763996326492
+      },
+      "5": {
+        "text": "Sử dụng chuẩn an toàn: OAuth 2.0, OpenID Connect, JWT.\n\nMật khẩu: Băm bằng thuật toán mạnh (bcrypt, Argon2), không lưu plaintext.\n\nĐa yếu tố (MFA): Thêm lớp bảo mật ngoài mật khẩu.\n\nSession management: Hết hạn phiên hợp lý, chống session hijacking.\n\n🛡️ Quản lý Ủy quyền (Authorization)\nNguyên tắc “least privilege”: Người dùng chỉ có quyền cần thiết.\n\nRole-based access control (RBAC) hoặc Attribute-based access control (ABAC)",
+        "submittedAt": 1763996412665
+      }
+    },
+    "aiResult": {
+      "perAnswer": [
+        {
+          "index": 0,
+          "score": 3,
+          "feedback": "Trả lời tốt phần frontend của quy trình phát triển nhưng bỏ sót hoàn toàn các bước quan trọng trong quy trình phát triển backend như thiết kế API, cơ sở dữ liệu, logic nghiệp vụ, và triển khai."
+        },
+        {
+          "index": 1,
+          "score": 2,
+          "feedback": "Liệt kê các công nghệ frontend rất tốt, nhưng thiếu hoàn toàn các ngôn ngữ, framework và cơ sở dữ liệu phổ biến cho backend, vốn là một phần thiết yếu của fullstack."
+        },
+        {
+          "index": 2,
+          "score": 1,
+          "feedback": "Chỉ mô tả kiến trúc monolithic mà không đề cập đến microservices, sự khác biệt giữa chúng, và các tiêu chí để lựa chọn phù hợp cho một ứng dụng fullstack."
+        },
+        {
+          "index": 3,
+          "score": 3,
+          "feedback": "Trình bày tốt các kỹ thuật tối ưu hóa phía client, nhưng bỏ qua các chiến lược quan trọng để tối ưu hiệu suất phía server và cơ sở dữ liệu."
+        },
+        {
+          "index": 4,
+          "score": 4,
+          "feedback": "Đề xuất công nghệ frontend và kênh realtime (WebSocket) phù hợp. Tuy nhiên, cần làm rõ hơn về kiến trúc backend để xử lý sự kiện thời gian thực và đảm bảo khả năng mở rộng cao cho ứng dụng chat."
+        },
+        {
+          "index": 5,
+          "score": 5,
+          "feedback": "Trình bày tốt về xác thực và ủy quyền. Tuy nhiên, thiếu các biện pháp bảo vệ dữ liệu tổng thể (mã hóa) và các chiến lược cụ thể để chống lại các lỗ hổng bảo mật web phổ biến khác như XSS, CSRF, SQL Injection."
+        }
+      ],
+      "overall": {
+        "score": 30,
+        "summary": "Thí sinh thể hiện kiến thức vững vàng về phát triển frontend và các công nghệ liên quan. Tuy nhiên, còn nhiều thiếu sót đáng kể về kiến trúc backend, cơ sở dữ liệu, các chiến lược tối ưu hóa và bảo mật toàn diện cho một ứng dụng fullstack. Cần bổ sung kiến thức chuyên sâu hơn về các khía cạnh backend để đáp ứng yêu cầu của một vai trò fullstack."
+      }
+    },
+    "completedAt": 1763996429219
+  }
+]

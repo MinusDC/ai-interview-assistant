@@ -1,0 +1,9 @@
+{
+  "contents": [
+    {
+      "parts": [
+        { "text": "Return a JSON array of 3 short interview question objects: [{\"text\":\"q1\"},{\"text\":\"q2\"},{\"text\":\"q3\"}]" }
+      ]
+    }
+  ]
+}

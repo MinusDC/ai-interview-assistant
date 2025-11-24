@@ -1,0 +1,29 @@
+# dependencies
+node_modules
+frontend/node_modules
+backend/node_modules
+
+# build outputs
+frontend/dist
+frontend/build
+backend/public
+uploads
+
+# logs
+*.log
+
+# env
+.env
+frontend/.env
+backend/.env
+
+# system/editor
+.DS_Store
+.vscode
+backend_backup
+
+
+# Ignore built frontend public output
+backend/public
+
+backend/public

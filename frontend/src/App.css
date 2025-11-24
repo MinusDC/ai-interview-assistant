@@ -1,0 +1,170 @@
+/* basic styling to match a compact centered layout, responsive */
+
+html,body,#root { height: 100%; margin:0; font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
+.app-layout { min-height: 100vh; }
+.app-footer { text-align: center; padding: 12px 16px; color: #666; background: #fafafa; }
+.content-wrapper { padding: 20px; display:flex; justify-content:center; }
+.content-inner { width: 100%; max-width: 1200px; box-sizing: border-box; padding: 0 12px; }
+.topnav { display:flex; align-items:center; justify-content:space-between; padding:12px 18px; background:#001529; color:white; }
+.topnav .title { font-size:18px; font-weight:600; color:white; }
+.topnav .nav-buttons { display:flex; gap:12px; align-items:center; }
+@media (max-width:720px) {
+  .content-inner { padding: 0 12px; }
+  .topnav { padding:10px; }
+}
+
+.message-bubble { padding:12px 14px; border-radius:12px; max-width:100%; }
+.bot { background:#f0f0f0; color:#000; }
+.user { background:#1890ff; color:#fff; text-align:right; margin-left:auto; }
+
+.question-text {
+  white-space: normal;   /* allow wrapping */
+  word-break: break-word;
+  font-weight: 600;
+  max-height: 120px;
+  overflow-y: auto;      /* scroll if very long */
+}
+
+.topnav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 22px;
+  background: #001529;
+  color: white;
+  position: relative; 
+}
+
+.topnav .title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.topnav .nav-buttons {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+}
+
+.topnav .backend-status {
+  font-size: 14px;
+  color: #b7eb8f; /* default green */
+}
+
+.topnav .backend-status:has(:contains("Down")) {
+  color: #ffccc7; /* red if down */
+}
+
+.interview-card {
+  width: 100%;
+  max-width: 1200px;   /* same size for both */
+  margin: auto;
+  box-sizing: border-box;
+}
+
+.large-card {
+  max-width: 1200px;  /* bigger ResumeUploader */
+}
+
+.timer-box {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 150px;
+}
+
+/* fullscreen overlay for spinners */
+.fullscreen-spinner {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;   /* stack spinner + text */
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  gap: 12px;
+}
+
+/* explicit tip text below spinner */
+.fullscreen-spinner .spinner-tip {
+  margin-top: 6px;
+  font-size: 16px;
+  color: #111;       /* visible on the light overlay */
+  font-weight: 600;
+  text-align: center;
+  max-width: 90%;
+}
+
+/* ensure ant spin size/placement remains centered when used */
+.fullscreen-spinner .ant-spin {
+  display: block;
+}
+
+/* full-page centered area used across pages */
+.page-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - var(--nav-height));
+  padding: 24px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* a card-like centered box */
+.center-card {
+  width: 100%;
+  max-width: 820px;      /* adjust width as you like */
+  padding: 28px;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+/* styling for the headline and the button layout */
+.center-card h2 {
+  margin: 0 0 12px 0;
+  font-weight: 600;
+  font-size: 22px;
+  color: #111827;
+}
+
+.center-action {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+.center-action .ant-btn {
+  min-width: 100px;   /* ensures equal width */
+}
+
+/* Dashboard responsive wrapper */
+.dashboard-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Title is centered and responsive */
+.dashboard-title {
+  text-align: center;
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+
+/* Make table container flow naturally on small screens */
+.ant-table {
+  width: 100%;
+}
+
+/* make pagination centered cleanly */
+.ant-pagination {
+  display: flex;
+  justify-content: center;
+}
